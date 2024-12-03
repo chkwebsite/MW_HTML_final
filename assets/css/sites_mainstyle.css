@@ -410,6 +410,12 @@ a#scroll {
   height: 100%;
 }
 @media(max-width:575px){
+  .grid_5 {
+    grid-template-columns: auto auto ;
+  }
+  .grid_9 {
+    grid-template-columns: auto auto;
+  }
   .hide-575{
     display:none;
   }
@@ -549,12 +555,35 @@ small{
   font-weight: bold;
 }
 @media(max-width:767px){
-
+  .grid_5 {
+    grid-template-columns: auto auto auto;
+  }
+  .grid_9 {
+    grid-template-columns: auto auto auto;
+  }
   .tab_button {
     position: static;
   }
   .tab_button .tab_btn-style {
     flex-direction: row;
     justify-content: space-around;
+  }
+}
+@media(max-width:959px){
+  .grid_5 {
+    grid-template-columns: auto auto auto;
+  }
+  .grid_9 {
+    grid-template-columns: auto auto auto auto auto;
+  }
+}
+@media(max-width:1120px){
+  .grid_9 {
+    grid-template-columns: auto auto auto auto auto auto;
+  }
+}
+@media(max-width:1280px){
+  .grid_9 {
+    grid-template-columns: auto auto auto auto auto auto auto;
   }
 }
