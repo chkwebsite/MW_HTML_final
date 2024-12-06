@@ -397,7 +397,7 @@ a#scroll {
 .grid_5 {
   display: grid;
   grid-template-columns: auto auto auto auto auto;
-  gap: 15px;
+  gap: 15px 65px;
   height: 100%;
 }
 /* .grid_5 .grid_div{
@@ -494,9 +494,21 @@ a#scroll {
   padding: 16px;
   border-radius: 12px 0px 12px 12px;
 }
+
+.home_top_1_slick-slider .slick-dots, .home_top_2_slick-slider .slick-dots {
+  display: flex;
+  justify-content: center;
+  margin: 0;
+  padding: 1rem 0;
+  list-style-type: none;
+  position: absolute;
+  bottom: 0px;
+  width: 100%;
+}
 @media(max-width:575px){
   .grid_5 {
     grid-template-columns: auto auto ;
+    gap: 15px 30px;
   }
   .grid_9 {
     grid-template-columns: auto auto;
@@ -549,12 +561,14 @@ ul.dev li a::after {
   text-decoration: none;
   color: #333;
   transition: 0.3s;
+  filter: grayscale(100%);
 }
 .card a.stretched-link:hover {
   text-decoration: none;
   color: #147ecf;
   transform: scale(1.06);
   transition: 0.3s;
+  filter: grayscale(0%);
 }
 .bb{
   position: relative;
@@ -642,6 +656,7 @@ small{
 @media(max-width:767px){
   .grid_5 {
     grid-template-columns: auto auto auto;
+    gap: 15px 35px;
   }
   .grid_9 {
     grid-template-columns: auto auto auto;
@@ -657,6 +672,7 @@ small{
 @media(max-width:959px){
   .grid_5 {
     grid-template-columns: auto auto auto;
+    gap: 15px 40px;
   }
   .grid_9 {
     grid-template-columns: auto auto auto auto auto;
