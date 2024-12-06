@@ -58,11 +58,11 @@ nav.mw-home .nav-link {
 .tab_content {
   position: absolute;
   content: "";
-  bottom: 40px;
-  left: 80px;
+  top: 30%;
+  right: 50px;
   padding: 10px;
   color: #fff;
-  width: 80%;
+  width: 40%;
 }
 .contact_icon {
   position: absolute;
