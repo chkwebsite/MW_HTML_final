@@ -18,33 +18,28 @@
     border-radius: 6px 6px 0px 0px;
     box-shadow: 0px 0px 6px #ccc;
 }
-.nav .nav-item button.active {
-    background-color: #508dc4;
-    color: #ffffff !important;
-    border-radius: 50px 3px 3px 50px;
-    text-align: left;
-    border-bottom: 3px solid transparent !important;
+.disp_flx {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 15px;
 }
-.nav .nav-item button {
-    background-color: #eeeeee;
-    color: #508dc4 !important;
-    border-radius: 50px 3px 3px 50px;
+/* .nav .nav-item.slick-active {
+  background-color: transparent;
+    border-radius: 12px 12px 12px 12px;
     text-align: left;
-    border-bottom: 3px solid transparent !important;
+    border: 1px solid red !important;
+} */
+.nav .nav-item button {
+    background-color: transparent;
+    color: #000000 !important;
+    border-radius: 12px 12px 12px 12px;
+    text-align: left;
     width: 100%;
     margin-bottom: 3px;
+    border: 1px solid #ddd;
 }
-.nav .nav-item button.active::after {
-    content: "";
-    border-right: 15px solid #b022a700;
-    border-left: 15px solid #508dc4;
-    border-bottom: 15px solid #ffc0cb00;
-    border-top: 15px solid #ff000000;
-    position: absolute;
-    right: -30px;
-    top: calc(50% - 15px);
-}
-button .icon_deact{
+/* button .icon_deact{
     display: block;
 }
 button .icon_act{
@@ -55,13 +50,209 @@ button.active .icon_act{
 }
 button.active .icon_deact{
     display: none;
-}
-button.active span{
+} */
+/* button.active span{
     color: #ffffff;
 }
 button span{
     color: #508dc4;
+} */
+button.slick-prev {
+    position: absolute;
+    top: 0px;
+    left: calc(50% - 30px);
+    transform: translate(0, -50%);
+    z-index: 100;
+    border-radius: 50%;
+    border: 1px solid #ddd;
+    background-color: #fff;
+    box-shadow: none;
+    width: 35px;
+    height: 35px;
 }
+button.slick-next {
+    position: absolute;
+    top: 0px;
+    left: calc(50% + 30px);
+    transform: translate(0, -50%);
+    z-index: 100;
+    border-radius: 50%;
+    border: 1px solid #ddd;
+    background-color: #fff;
+    box-shadow: none;
+    width: 35px;
+    height: 35px;
+}
+.slick-prev:before {
+    content: "\f078";
+    font-family: 'fontawesome';
+}
+.slick-next:before, [dir=rtl] .slick-prev:before {
+    content: "\f077";
+    font-family: 'fontawesome';
+}
+.our_service_slick-slider button.nav-link {
+    color: #000000 !important;
+    border: 1px solid #dddddd !important;
+    margin-bottom: 10px; 
+    border-radius: 12px; 
+    padding: 5px 15px;  
+    background-color: white;
+    min-height: 57px;
+    text-align: left;
+}
+.our_service_slick-slider button.nav-link:hover {
+    color: #000000 !important;
+    border: 1px solid #dd2121 !important;
+}
+.np.active.show {
+    color: #000000 !important;
+    border: 1px solid #e5243c !important;
+}
+.tab-pane{
+  border-radius: 12px;
+  padding: 30px;
+}
+#pills-Agriculture {    
+  background-color: #e5243c;
+  color: #fff;    
+}
+.zh.active.show {
+    color: #000000 !important;
+    border: 1px solid #dda83c !important;
+}
+#pills-ChildProtection {    
+  background-color: #dda83c;
+  color: #fff;    
+}
+.ghwb.active.show {
+    color: #000000 !important;
+    border: 1px solid #4e9e3a !important;
+}
+#pills-Education {    
+  background-color: #4e9e3a;
+  color: #fff;    
+}
+.qe.active.show {
+    color: #000000 !important;
+    border: 1px solid #c5192f !important;
+}
+#pills-Livelihood {    
+  background-color: #c5192f;
+  color: #fff;    
+}
+.ge.active.show {
+    color: #000000 !important;
+    border: 1px solid #ff3922 !important;
+}
+#pills-Health {    
+  background-color: #ff3922;
+  color: #fff;    
+}
+.cws.active.show {
+    color: #000000 !important;
+    border: 1px solid #27bbe5 !important;
+}
+#pills-Watersanitation {    
+  background-color: #27bbe5;
+  color: #fff;    
+}
+.ace.active.show {
+    color: #000000 !important;
+    border: 1px solid #fcc30d !important;
+}
+#pills-Nutrition {    
+  background-color: #fcc30d;
+  color: #fff;    
+}
+.dweg.active.show {
+    color: #000000 !important;
+    border: 1px solid #a21945 !important;
+}
+#pills-SkillingMicroenterprise {    
+  background-color: #a21945;
+  color: #fff;    
+}
+.iiii.active.show {
+    color: #000000 !important;
+    border: 1px solid #fe6927 !important;
+}
+#pills-MicrofinanceArtculture {    
+  background-color: #fe6927;
+  color: #fff;    
+}
+.ri.active.show {
+    color: #000000 !important;
+    border: 1px solid #df1268 !important;
+}
+#pills-childnutrition {    
+  background-color: #df1268;
+  color: #fff;    
+}
+.scc.active.show {
+    color: #000000 !important;
+    border: 1px solid #ffaf2d !important;
+}
+#pills-waterresources {    
+  background-color: #ffaf2d;
+  color: #fff;    
+}
+/* .np.active.show {
+    color: #000000 !important;
+    border: 1px solid #dd2121 !important;
+} */
+.rcp.active.show {
+    color: #000000 !important;
+    border: 1px solid #cea457 !important;
+}
+#pills-womenempowerment {    
+  background-color: #cea457;
+  color: #fff;    
+}
+.ca.active.show {
+    color: #000000 !important;
+    border: 1px solid #699c6d !important;
+}
+#pills-communityempowerment {    
+  background-color: #699c6d;
+  color: #fff;    
+}
+.lbw.active.show {
+    color: #000000 !important;
+    border: 1px solid #0b97d9 !important;
+}
+#pills-projectmanagement {    
+  background-color: #0b97d9;
+  color: #fff;    
+}
+.ll.active.show {
+    color: #000000 !important;
+    border: 1px solid #56c02a !important;
+}
+#pills-ll {    
+  background-color: #56c02a;
+  color: #fff;    
+}
+.pjsi.active.show {
+    color: #000000 !important;
+    border: 1px solid #00699e !important;
+}
+#pills-pjsi {    
+  background-color: #00699e;
+  color: #fff;    
+}
+.pg.active.show {
+    color: #000000 !important;
+    border: 1px solid #3b6283 !important;
+}
+#pills-pg {    
+  background-color: #3b6283;
+  color: #fff;    
+}
+
+/* .slick-list{
+  height: 460px !important;
+} */
     </style>
 </head>
 <body>
@@ -178,183 +369,170 @@ button span{
                             <div class="row">
 
                                 <div class="col-xl-3 col-lg-3 col-md-4 col-sm-12">
-                                    <ul class="nav nav-pills flex-column" id="pills-tab" role="tablist">
-                                      <li class="nav-item" role="presentation">
-                                        <button class="nav-link fw-semibold position-relative active" id="pills-Agriculture-tab" 
+                                  <div class="our_service_slick-slider " id="pills-tab" role="tablist" style="border: 0px solid #a6aac1;">
+                                    
+                                        <button class="nav-link np active show fw-semibold position-relative active" id="pills-Agriculture-tab" 
                                         data-bs-toggle="pill" data-bs-target="#pills-Agriculture" type="button" role="tab" aria-controls="pills-Agriculture" 
                                         aria-selected="true">
                                         <div class="disp_flx">
-                                            <span>Agriculture</span>  
-                                            <img class="icon_deact" src="assets/images/agriculture.png" style="height:40px">
-                                            <img class="icon_act" src="assets/images/icon/icon/agriculture.png" style="height:40px">
+                                          <img class="icon_deact" src="assets/images/np.png" style="height:40px">
+                                            <span>No poverty</span>  
                                         </div>
                                         </button>
-                                      </li>
-                                      <li class="nav-item" role="presentation">
-                                        <button class="nav-link text-primary fw-semibold position-relative" id="pills-ChildProtection-tab" 
+                                      
+                                        <button class="nav-link zh fw-semibold position-relative" id="pills-ChildProtection-tab" 
                                         data-bs-toggle="pill" data-bs-target="#pills-ChildProtection" type="button" role="tab" 
                                         aria-controls="pills-ChildProtection" aria-selected="false">
                                         <div class="disp_flx">
-                                            <span>Child Protection & Gender</span>  
-                                            <img class="icon_deact" src="assets/images/child_protection.png" style="height:40px">
-                                            <img class="icon_act" src="assets/images/icon/icon/child_protection.png" style="height:40px">
+                                          <img class="icon_deact" src="assets/images/zh.png" style="height:40px">
+                                            <span>Zero Hunger</span>  
                                         </div>                                        
                                         </button>
-                                      </li>
-                                      <li class="nav-item" role="presentation">
-                                        <button class="nav-link text-primary fw-semibold position-relative" id="pills-Education-tab" 
+                                     
+                                        <button class="nav-link ghwb fw-semibold position-relative" id="pills-Education-tab" 
                                         data-bs-toggle="pill" data-bs-target="#pills-Education" type="button" role="tab" 
                                         aria-controls="pills-Education" aria-selected="false">
                                         <div class="disp_flx">
-                                            <span>Education</span>  
-                                            <img class="icon_deact" src="assets/images/education.png" style="height:40px">
-                                            <img class="icon_act" src="assets/images/icon/icon/education.png" style="height:40px">
+                                          <img class="icon_deact" src="assets/images/ghwb.png" style="height:40px">
+                                            <span>Good Health & Well-Being</span>  
                                         </div>   
                                         </button>
-                                      </li>
-
-                                      <li class="nav-item" role="presentation">
-                                        <button class="nav-link text-primary fw-semibold position-relative" id="pills-Livelihood-tab" 
+                                      
+                                        <button class="nav-link qe fw-semibold position-relative" id="pills-Livelihood-tab" 
                                         data-bs-toggle="pill" data-bs-target="#pills-Livelihood" type="button" role="tab" 
                                         aria-controls="pills-Livelihood" aria-selected="false">
                                         <div class="disp_flx">
-                                            <span>Livelihood</span>  
-                                            <img class="icon_deact" src="assets/images/livelihood.png" style="height:40px">
-                                            <img class="icon_act" src="assets/images/icon/icon/livelihood.png" style="height:40px">
+                                          <img class="icon_deact" src="assets/images/qe.png" style="height:40px">
+                                            <span>Quality Education</span>  
                                         </div>   
                                         </button>
-                                      </li>
-
-                                      <li class="nav-item" role="presentation">
-                                        <button class="nav-link text-primary fw-semibold position-relative" id="pills-Health-tab" 
+                                      
+                                        <button class="nav-link ge fw-semibold position-relative" id="pills-Health-tab" 
                                         data-bs-toggle="pill" data-bs-target="#pills-Health" type="button" role="tab" 
                                         aria-controls="pills-Health" aria-selected="false">
                                         <div class="disp_flx">
-                                            <span>Health</span>  
-                                            <img class="icon_deact" src="assets/images/health.png" style="height:40px">
-                                            <img class="icon_act" src="assets/images/icon/icon/health.png" style="height:40px">
+                                          <img class="icon_deact" src="assets/images/ge.png" style="height:40px">
+                                            <span>Gender Equality</span>  
                                         </div>   
                                         </button>
-                                      </li>
-
-                                      <li class="nav-item" role="presentation">
-                                        <button class="nav-link text-primary fw-semibold position-relative" id="pills-Watersanitation-tab" 
+                                      
+                                        <button class="nav-link cws fw-semibold position-relative" id="pills-Watersanitation-tab" 
                                         data-bs-toggle="pill" data-bs-target="#pills-Watersanitation" type="button" role="tab" 
                                         aria-controls="pills-Watersanitation" aria-selected="false">
                                         <div class="disp_flx">
-                                            <span>Water & sanitation</span>  
-                                            <img class="icon_deact" src="assets/images/water_sanitation.png" style="height:40px">
-                                            <img class="icon_act" src="assets/images/icon/icon/water_sanitation.png" style="height:40px">
+                                          <img class="icon_deact" src="assets/images/cws.png" style="height:40px">
+                                            <span>Clean Water & Sanitation</span>  
                                         </div>   
                                         </button>
-                                      </li>
-
-                                      <li class="nav-item" role="presentation">
-                                        <button class="nav-link text-primary fw-semibold position-relative" id="pills-Nutrition-tab" 
+                                      
+                                        <button class="nav-link ace fw-semibold position-relative" id="pills-Nutrition-tab" 
                                         data-bs-toggle="pill" data-bs-target="#pills-Nutrition" type="button" role="tab" 
                                         aria-controls="pills-Nutrition" aria-selected="false">
                                         <div class="disp_flx">
-                                            <span>Nutrition</span>  
-                                            <img class="icon_deact" src="assets/images/nutrition.png" style="height:40px">
-                                            <img class="icon_act" src="assets/images/icon/icon/nutrition.png" style="height:40px">
+                                          <img class="icon_deact" src="assets/images/ace.png" style="height:40px">
+                                            <span>Affordable & Clean Energy</span>  
                                         </div>   
                                         </button>
-                                      </li>
-
-                                      <li class="nav-item" role="presentation">
-                                        <button class="nav-link text-primary fw-semibold position-relative" id="pills-SkillingMicroenterprise-tab" 
+                                      
+                                        <button class="nav-link dweg fw-semibold position-relative" id="pills-SkillingMicroenterprise-tab" 
                                         data-bs-toggle="pill" data-bs-target="#pills-SkillingMicroenterprise" type="button" role="tab" 
                                         aria-controls="pills-SkillingMicroenterprise" aria-selected="false">
                                         <div class="disp_flx">
-                                            <span>Skilling & Microenterprise</span>  
-                                            <img class="icon_deact" src="assets/images/skilling-&-microenterprise.png" style="height:40px">
-                                            <img class="icon_act" src="assets/images/icon/icon/skilling-&-microenterprise.png" style="height:40px">
+                                          <img class="icon_deact" src="assets/images/dweg.png" style="height:40px">
+                                            <span>Decent Work & Economic Growth</span>  
                                         </div>   
                                         </button>
-                                      </li>
-
-                                      <li class="nav-item" role="presentation">
-                                        <button class="nav-link text-primary fw-semibold position-relative" id="pills-MicrofinanceArtculture-tab" 
+                                      
+                                        <button class="nav-link iiii fw-semibold position-relative" id="pills-MicrofinanceArtculture-tab" 
                                         data-bs-toggle="pill" data-bs-target="#pills-MicrofinanceArtculture" type="button" role="tab" 
                                         aria-controls="pills-MicrofinanceArtculture" aria-selected="false">
                                         <div class="disp_flx">
-                                            <span>Microfinance & Art culture</span>  
-                                            <img class="icon_deact" src="assets/images/microfinance-&-art-culture.png" style="height:40px">
-                                            <img class="icon_act" src="assets/images/icon/icon/microfinance-&-art-culture.png" style="height:40px">
+                                          <img class="icon_deact" src="assets/images/iiii.png" style="height:40px">
+                                            <span>Industry Innovation & industry Insfratecture</span>  
                                         </div>   
                                         </button>
-                                      </li>
-
-                                      <li class="nav-item" role="presentation">
-                                        <button class="nav-link text-primary fw-semibold position-relative" id="pills-childnutrition-tab" 
+                                      
+                                        <button class="nav-link ri fw-semibold position-relative" id="pills-childnutrition-tab" 
                                         data-bs-toggle="pill" data-bs-target="#pills-childnutrition" type="button" role="tab" 
                                         aria-controls="pills-childnutrition" aria-selected="false">
                                         <div class="disp_flx">
-                                            <span>Child nutrition</span>  
-                                            <img class="icon_deact" src="assets/images/child_nutrition.png" style="height:40px">
-                                            <img class="icon_act" src="assets/images/icon/icon/child_nutrition.png" style="height:40px">
+                                          <img class="icon_deact" src="assets/images/ri.png" style="height:40px">
+                                            <span>Reduce Inequalities</span>  
                                         </div>   
                                         </button>
-                                      </li>
-
-                                      <li class="nav-item" role="presentation">
-                                        <button class="nav-link text-primary fw-semibold position-relative" id="pills-waterresources-tab" 
+                                      
+                                        <button class="nav-link scc fw-semibold position-relative" id="pills-waterresources-tab" 
                                         data-bs-toggle="pill" data-bs-target="#pills-waterresources" type="button" role="tab" 
                                         aria-controls="pills-waterresources" aria-selected="false">
                                         <div class="disp_flx">
-                                            <span>Water resources</span>  
-                                            <img class="icon_deact" src="assets/images/water_resources.png" style="height:40px">
-                                            <img class="icon_act" src="assets/images/icon/icon/water_resources.png" style="height:40px">
+                                          <img class="icon_deact" src="assets/images/scc.png" style="height:40px">
+                                            <span>Sustainable Cities & Communities</span>  
                                         </div>   
                                         </button>
-                                      </li>
-
-                                      <li class="nav-item" role="presentation">
-                                        <button class="nav-link text-primary fw-semibold position-relative" id="pills-womenempowerment-tab" 
+                                      
+                                        <button class="nav-link rcp fw-semibold position-relative" id="pills-womenempowerment-tab" 
                                         data-bs-toggle="pill" data-bs-target="#pills-womenempowerment" type="button" role="tab" 
                                         aria-controls="pills-womenempowerment" aria-selected="false">
                                         <div class="disp_flx">
-                                            <span>Women empowerment</span>  
-                                            <img class="icon_deact" src="assets/images/Women-empowerment.png" style="height:40px">
-                                            <img class="icon_act" src="assets/images/icon/icon/Women-empowerment.png" style="height:40px">
+                                          <img class="icon_deact" src="assets/images/rcp.png" style="height:40px">
+                                            <span>Responsible Consumption & Production</span>  
                                         </div>   
                                         </button>
-                                      </li>
-
-                                      <li class="nav-item" role="presentation">
-                                        <button class="nav-link text-primary fw-semibold position-relative" id="pills-communityempowerment-tab" 
+                                      
+                                        <button class="nav-link ca fw-semibold position-relative" id="pills-communityempowerment-tab" 
                                         data-bs-toggle="pill" data-bs-target="#pills-communityempowerment" type="button" role="tab" 
                                         aria-controls="pills-communityempowerment" aria-selected="false">
                                         <div class="disp_flx">
-                                            <span>Community empowerment</span>  
-                                            <img class="icon_deact" src="assets/images/Community-empowerment.png" style="height:40px">
-                                            <img class="icon_act" src="assets/images/icon/icon/Community-empowerment.png" style="height:40px">
+                                          <img class="icon_deact" src="assets/images/ca.png" style="height:40px">
+                                            <span>Climate Action</span>  
                                         </div>   
                                         </button>
-                                      </li>
-
-                                      <li class="nav-item" role="presentation">
-                                        <button class="nav-link text-primary fw-semibold position-relative" id="pills-projectmanagement-tab" 
+                                      
+                                        <button class="nav-link lbw fw-semibold position-relative" id="pills-projectmanagement-tab" 
                                         data-bs-toggle="pill" data-bs-target="#pills-projectmanagement" type="button" role="tab" 
                                         aria-controls="pills-projectmanagement" aria-selected="false">
                                         <div class="disp_flx">
-                                            <span>Project management</span>  
-                                            <img class="icon_deact" src="assets/images/project-management.png" style="height:40px">
-                                            <img class="icon_act" src="assets/images/icon/icon/project-management.png" style="height:40px">
+                                          <img class="icon_deact" src="assets/images/lbw.png" style="height:40px">
+                                            <span>Life Below Water</span>  
                                         </div>   
                                         </button>
-                                      </li>
-                                    </ul>
+                                        <!-- NEW  -->
+                                        <button class="nav-link ll fw-semibold position-relative" id="pills-ll-tab" 
+                                        data-bs-toggle="pill" data-bs-target="#pills-ll" type="button" role="tab" 
+                                        aria-controls="pills-ll" aria-selected="false">
+                                        <div class="disp_flx">
+                                          <img class="icon_deact" src="assets/images/ll.png" style="height:40px">
+                                            <span>Life on Land</span>  
+                                        </div>   
+                                        </button>
+
+                                        <button class="nav-link pjsi fw-semibold position-relative" id="pills-pjsi-tab" 
+                                        data-bs-toggle="pill" data-bs-target="#pills-pjsi" type="button" role="tab" 
+                                        aria-controls="pills-pjsi" aria-selected="false">
+                                        <div class="disp_flx">
+                                          <img class="icon_deact" src="assets/images/pjsi.png" style="height:40px">
+                                            <span>Peace Justice & Strong Institutions</span>  
+                                        </div>   
+                                        </button>
+
+                                        <button class="nav-link pg fw-semibold position-relative" id="pills-pg-tab" 
+                                        data-bs-toggle="pill" data-bs-target="#pills-pg" type="button" role="tab" 
+                                        aria-controls="pills-pg" aria-selected="false">
+                                        <div class="disp_flx">
+                                          <img class="icon_deact" src="assets/images/pg.png" style="height:40px">
+                                            <span>Partnerships & Goals</span>  
+                                        </div>   
+                                        </button>
+                                  </div>
+                                    
                                     </div>
                                     <div class="col-xl-9 col-lg-9 col-md-8 col-sm-12">
                                     <div class="tab-content border1 rounded-3 border-primary1 pt-0 p-3 w-100" id="pills-tabContent">
                                       <div class="tab-pane fade show active" id="pills-Agriculture" role="tabpanel" aria-labelledby="pills-Agriculture-tab">
-                                        <h2 class="text-success">Agriculture</h2>
+                                        <img src="./assets/images/np.png" alt="">
+                                        <h2 class="mt-3">No poverty</h2>
                                         <div class="row">
-                                            <div class="col-xl-5 col-lg-5 col-md-5 col-am-12">
-                                                <img class="w-100 rounded-3 pt-2 shadow1" src="assets/images/agriculture_bann_1.png">
-                                            </div>
-                                            <div class="col-xl-7 col-lg-7 col-md-7 col-am-12">
+                                            <div class="col-am-12">
                                                 <p style="text-align: justify;">
                                                     Microware&nbsp;has engaged with multiple Agri programs, both as part 
                                                         of their livelihood initiatives, and otherwise. The more 
@@ -378,10 +556,7 @@ button span{
                                         </div>
 
                                         <div class="row mt-4">
-                                            <div class="col-xl-5 col-lg-5 col-md-5 col-am-12 order-last">
-                                                <img class="w-100 rounded-3 pt-2 shadow1" src="assets/images/agriculture_bann_1.png">
-                                            </div>
-                                            <div class="col-xl-7 col-lg-7 col-md-7 col-am-12">
+                                            <div class="col-am-12">
                                                 <p style="text-align: justify;">
                                                     Microware&nbsp;has engaged with multiple Agri programs, both as part 
                                                         of their livelihood initiatives, and otherwise. The more 
@@ -467,6 +642,21 @@ button span{
 
                                       <div class="tab-pane fade" id="pills-projectmanagement" role="tabpanel" aria-labelledby="pills-projectmanagement-tab">
                                         <h2>Project management</h2>
+                                        <p>Please check our more design @ <a target="_blank" href="https://codepen.io/Gaurav-Rana-the-reactor">Codepen</a></p>
+                                      </div>
+
+                                      <div class="tab-pane fade" id="pills-ll" role="tabpanel" aria-labelledby="pills-ll-tab">
+                                        <h2>Life on Land</h2>
+                                        <p>Please check our more design @ <a target="_blank" href="https://codepen.io/Gaurav-Rana-the-reactor">Codepen</a></p>
+                                      </div>
+
+                                      <div class="tab-pane fade" id="pills-pjsi" role="tabpanel" aria-labelledby="pills-pjsi-tab">
+                                        <h2>Peace Justice & Strong Institutions</h2>
+                                        <p>Please check our more design @ <a target="_blank" href="https://codepen.io/Gaurav-Rana-the-reactor">Codepen</a></p>
+                                      </div>
+
+                                      <div class="tab-pane fade" id="pills-pg" role="tabpanel" aria-labelledby="pills-pg-tab">
+                                        <h2>Partnerships & Goals</h2>
                                         <p>Please check our more design @ <a target="_blank" href="https://codepen.io/Gaurav-Rana-the-reactor">Codepen</a></p>
                                       </div>
                                     </div>
@@ -590,6 +780,29 @@ button span{
   });
 });
   </script>
-
+<script>
+  $(".our_service_slick-slider").slick({
+  slidesToShow: 6,
+      slidesToScroll: 1,
+      autoplay: false,
+      //autoplaySpeed: 5000,
+      vertical: true,
+      verticalSwiping: true,
+      arrows: true,
+      dots: false,
+      pauseOnHover: false,
+      responsive: [{
+          breakpoint: 768,
+          settings: {
+              slidesToShow: 6
+          }
+      }, {
+          breakpoint: 520,
+          settings: {
+              slidesToShow: 6
+          }
+      }]
+});
+</script>
 </body>
 </html>
