@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/sites_mainstyle.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/bootstrap-icons.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/all.min.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/aos/aos.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css">
+    <title>|| New_-_Microware ||</title>
+    <style>
+        .img_style{
+    height: 220px;
+    object-fit: cover;
+    object-position: top;
+    border-radius: 6px 6px 0px 0px;
+    box-shadow: 0px 0px 6px #ccc;
+}
+.pos_rel{
+  position: relative;
+}
+.upper_layerinn {
+  position: absolute;
+  top: 0px;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+.pos{
+  position: absolute;
+  bottom: -75px;
+  width: 100%;
+}
+.pos img{
+  height:150px
+}
+.mt-100{
+  margin-top: 100px !important;
+}
+
+@media (max-width:767px){
+  .pos{
+    display:none;
+  }
+  .mt-100{
+  margin-top: 0px !important;
+}
+}
+    </style>
+</head>
+<body>
+
+    <section class="header_section">
+        <div class="container-fluid">
+            <div class="row hide-575" style="border-bottom: 1px solid #ddd;">
+                <div class="col-xl-11 col-lg-11 col-md-11 col-sm-12 m-auto p-0">
+                    <nav class="navbar navbar-expand-sm py-0">
+
+                        <div class="container-fluid">
+                          <!-- Links -->
+                          <ul class="navbar-nav ms-auto">
+                            <li class="nav-item">
+                              <a class="nav-link" href="#">
+                                <i class="bi bi-volume-up-fill"></i>
+                              </a>
+                            </li>
+                            <li class="nav-item" style="margin-right: 6px;">
+                                <button type="button" class="btn btn-light border btn-sm rounded-0 mt-1">A-</button>
+                                <button type="button" class="btn btn-light border btn-sm rounded-0 mt-1">A</button>
+                                <button type="button" class="btn btn-light border btn-sm rounded-0 mt-1">A+</button>
+                            </li>
+                            <li class="nav-item">
+                              <a class="nav-link p-1" href="#">
+                                <img src="./assets/images/facebook-icon.png" alt="" style="height: 30px;">
+                              </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link p-1" href="#">
+                                  <img src="./assets/images/insta-icon.png" alt="" style="height: 30px;">
+                                </a>
+                              </li>
+                              <li class="nav-item">
+                                <a class="nav-link p-1" href="#">
+                                  <img src="./assets/images/twitter-icon.png" alt="" style="height: 30px;">
+                                </a>
+                              </li>
+                              <li class="nav-item">
+                                <a class="nav-link p-1" href="#">
+                                  <img src="./assets/images/youtube-icon.png" alt="" style="height: 30px;">
+                                </a>
+                              </li>
+                          </ul>
+                        </div>
+                      
+                      </nav>
+                </div>
+            </div>
+            <div class="row" style="border-bottom: 1px solid #ddd;">
+                <div class="col-xl-11 col-lg-11 col-md-11 col-sm-12 m-auto p-0">
+                    <nav class="navbar navbar-expand-md mw-home">
+                        <div class="container-fluid">
+                          <a class="navbar-brand" href="index.html">
+                            <img src="./assets/images/mw-logo.png" alt="">
+                          </a>
+                          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
+                            <span class="navbar-toggler-icon"></span>
+                          </button>
+                          <div class="collapse navbar-collapse" id="collapsibleNavbar">
+                            <ul class="navbar-nav ms-auto">
+                              <li class="nav-item">
+                                <a class="nav-link" href="about.html">About us</a>
+                              </li>
+                              <li class="nav-item">
+                                <a class="nav-link" href="our_services.html">Our Services</a>
+                              </li>
+                              <li class="nav-item">
+                                <a class="nav-link" href="client_speak.html">Client Speak</a>
+                              </li> 
+                              <li class="nav-item">
+                                <a class="nav-link" href="employee_corner.html">Employee Corner</a>
+                              </li> 
+                              <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Policies</a>
+                                <ul class="dropdown-menu">
+                                  <li><a class="dropdown-item" target="_blank" href="./assets/files/Prevention of Sexual Harassment Policy_Final.pdf">Posh policy</a></li>
+                                  <li><a class="dropdown-item" target="_blank" href="./assets/files/MW_HRManual.pdf">HR manual</a></li>
+                                </ul>
+                              </li>   
+                              <li class="nav-item">
+                                <a class="nav-link" href="contact.html">Contact Us</a>
+                              </li>  
+                              <!-- <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Dropdown</a>
+                                <ul class="dropdown-menu">
+                                  <li><a class="dropdown-item" href="#">Link</a></li>
+                                  <li><a class="dropdown-item" href="#">Another link</a></li>
+                                  <li><a class="dropdown-item" href="#">A third link</a></li>
+                                </ul>
+                              </li> -->
+                            </ul>
+                          </div>
+                        </div>
+                      </nav>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    
+
+    <section class="about_section">
+        <div class="container-fluid">
+          <div class="row" style="background-color: #F1F8FF;">
+              <div class="col-sm-12 p-0">
+                <div class="pos_rel">
+                    <img src="./assets/images/about_bann.png" width="100%" alt="">
+                    <div class="upper_layerinn text-white">
+                      <div>
+                        <h1 class="text-center">
+                           "Client speak "
+                        </h1>
+                        <p class="text-center">Transforming data collection and analysis with<br> adaptive tech for development and impact</p>
+                      </div>
+                </div>
+                <div>
+                <div class="row pos">
+                    <div class="col-xl-10 col-lg-10 col-md-11 col-sm-12 m-auto">
+                        <div class="row">
+                            <div class="col-xl-3 col-lg-3 col-md-3 col-sm-6">
+                                <img class="w-100" src="./assets//images/about_sm-1.png" alt="">
+                            </div>
+                            <div class="col-xl-3 col-lg-3 col-md-3 col-sm-6">
+                                <img class="w-100" src="./assets//images/about_sm-2.png" alt="">
+                            </div>
+                            <div class="col-xl-3 col-lg-3 col-md-3 col-sm-6">
+                                <img class="w-100" src="./assets//images/about_sm-3.png" alt="">
+                            </div>
+                            <div class="col-xl-3 col-lg-3 col-md-3 col-sm-6">
+                                <img class="w-100" src="./assets//images/about_sm-4.png" alt="">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+              </div>
+              </div>
+                <div class="mt-100 col-xl-11 col-lg-11 col-md-11 col-sm-12 m-auto">
+                    <div class="row">
+                        <div class="col-sm-12 py-3">
+                            <div class="disp_flx">
+                            <h2 class="mb-0 head-color bb">Clients</h2>
+                            </div>
+                        </div>
+                        </div>
+                        <div class="row">
+                        <div class="col-sm-12">
+                          <h5>Microware, with over two decades of 
+                            relevant experience, has engaged extensively across three primary 
+                            thematic areas, other than regular IT ERP systems.</h5>
+                            <ol>
+                              <li style="text-align: justify;">
+                                <b>Social / development sector Solutions:</b>  For 21 years now, 
+                                Microware engages with UN agencies, Government, CSRs, 
+                                Foundations and Trusts, NGOs and Bilateral and multi lateral 
+                                funding agencies to provide solutions that work across multiple 
+                                geographies and technologies, including off-line, mobile and 
+                                on-line systems in diverse domains like agriculture, water and 
+                                sanitation (WASH), rural livelihoods, education, health, child 
+                                nutrition and women empowerment
+                              </li>
+                              <li style="text-align: justify;">
+                                <b>Telecom and security applications:</b>   Microware, in a separate 
+                                vertical, also works with real time, high volume data handling 
+                                and telecom and security applications, as well as MIS systems 
+                                for corporate and International clients. This expertise coupled 
+                                with the experience in date warehousing and dashboards and 
+                                information displays and alerts has helped Microware’s expert 
+                                teams deliver crisp, practical, action oriented systems in the 
+                                development sector.
+                              </li>
+                              <li style="text-align: justify;">
+                                <b>Off-shore development and support:</b>   We partner with 
+                                IT companies, as well as end users across the World to provide 
+                                development as well as maintenance support, for large, medium 
+                                and small enterprises across a variety of technologies. 
+                                Typically, the assignment are long term, and include consulting 
+                                and management support, over and above the technical 
+                                development.
+                              </li>
+                            </ol>
+                        </div>
+                        </div>
+
+                       
+                </div>
+            
+        </div>
+
+        <div class="row mt-5">
+            <div class="col-xl-8 col-lg-8 col-md-8 col-sm-12 m-auto">
+                <div class="govt_logo_slick-slider_4 mt-4">
+                    <div class="element element-1">
+                      <div class="card rounded-4 mx-3">
+                        <div class="card-body">
+                            <div class="row">
+                                <div class="col-xl-3 col-lg-3 col-md-4 col-sm-12 text-center">
+                                    <img class="w-100" src="./assets/images/ClientSectionA/AllIndiaRadio.png" alt="">
+                                    <h3 class="mb-0">Akashvani</h3>
+                                    <p>All India Radio</p>
+                                </div>
+                                <div class="col-xl-9 col-lg-9 col-md-8 col-sm-12">
+                                    <div class="d-flex justify-content-center">
+                                        <img class="text-center" src="./assets/images/allIndiaRadio.png" alt="" style="height: 150px;">
+                                    </div>
+                                    <p class="px-4" style="text-align: justify;">
+                                        All India Radio India’s Public Service Broadcaster, the Radio vertical of Prasar 
+                                        Bharati has been serving to inform, educate and entertain its audiences since its 
+                                        inception, living up to its motto – ‘Bahujan Hitaya : Bahujan Sukhaya’. One of the 
+                                        largest broadcasting organisations in the world in terms of the number of languages 
+                                        of broadcast and the spectrum of socio-economic and cultural diversity it serves, 
+                                        AIR’s home service comprises of 591 Broadcasting centres located across the country, 
+                                        covering nearly 90% of the country’s area and 98% of the total population. 
+                                        Terrestrially, AIR originates programming in 23 languages and 179 dialects.<br><br>
+                                        At present, there are 17 AIR channels which are being live streamed through AIR 
+                                        website allindiaradio.gov.in and mobile app “All India Radio Live” available on 
+                                        Android and iOS platforms. These 17 are channels are as follows:
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="element element-1">
+                        <div class="card rounded-4 mx-3">
+                          <div class="card-body">
+                              <div class="row">
+                                  <div class="col-xl-3 col-lg-3 col-md-4 col-sm-12 text-center">
+                                      <img class="w-100" src="./assets/images/ClientSectionA/AllIndiaRadio.png" alt="">
+                                      <h3 class="mb-0">Akashvani</h3>
+                                      <p>All India Radio</p>
+                                  </div>
+                                  <div class="col-xl-9 col-lg-9 col-md-8 col-sm-12">
+                                      <div class="d-flex justify-content-center">
+                                          <img class="text-center" src="./assets/images/allIndiaRadio.png" alt="" style="height: 150px;">
+                                      </div>
+                                      <p class="px-4" style="text-align: justify;">
+                                          All India Radio India’s Public Service Broadcaster, the Radio vertical of Prasar 
+                                          Bharati has been serving to inform, educate and entertain its audiences since its 
+                                          inception, living up to its motto – ‘Bahujan Hitaya : Bahujan Sukhaya’. One of the 
+                                          largest broadcasting organisations in the world in terms of the number of languages 
+                                          of broadcast and the spectrum of socio-economic and cultural diversity it serves, 
+                                          AIR’s home service comprises of 591 Broadcasting centres located across the country, 
+                                          covering nearly 90% of the country’s area and 98% of the total population. 
+                                          Terrestrially, AIR originates programming in 23 languages and 179 dialects.<br><br>
+                                          At present, there are 17 AIR channels which are being live streamed through AIR 
+                                          website allindiaradio.gov.in and mobile app “All India Radio Live” available on 
+                                          Android and iOS platforms. These 17 are channels are as follows:
+                                      </p>
+                                  </div>
+                              </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="element element-1">
+                        <div class="card rounded-4 mx-3">
+                          <div class="card-body">
+                              <div class="row">
+                                  <div class="col-xl-3 col-lg-3 col-md-4 col-sm-12 text-center">
+                                      <img class="w-100" src="./assets/images/ClientSectionA/AllIndiaRadio.png" alt="">
+                                      <h3 class="mb-0">Akashvani</h3>
+                                      <p>All India Radio</p>
+                                  </div>
+                                  <div class="col-xl-9 col-lg-9 col-md-8 col-sm-12">
+                                      <div class="d-flex justify-content-center">
+                                          <img class="text-center" src="./assets/images/allIndiaRadio.png" alt="" style="height: 150px;">
+                                      </div>
+                                      <p class="px-4" style="text-align: justify;">
+                                          All India Radio India’s Public Service Broadcaster, the Radio vertical of Prasar 
+                                          Bharati has been serving to inform, educate and entertain its audiences since its 
+                                          inception, living up to its motto – ‘Bahujan Hitaya : Bahujan Sukhaya’. One of the 
+                                          largest broadcasting organisations in the world in terms of the number of languages 
+                                          of broadcast and the spectrum of socio-economic and cultural diversity it serves, 
+                                          AIR’s home service comprises of 591 Broadcasting centres located across the country, 
+                                          covering nearly 90% of the country’s area and 98% of the total population. 
+                                          Terrestrially, AIR originates programming in 23 languages and 179 dialects.<br><br>
+                                          At present, there are 17 AIR channels which are being live streamed through AIR 
+                                          website allindiaradio.gov.in and mobile app “All India Radio Live” available on 
+                                          Android and iOS platforms. These 17 are channels are as follows:
+                                      </p>
+                                  </div>
+                              </div>
+                          </div>
+                        </div>
+                      </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="footer_n bg-f">
+        <div class="container-fluid">
+      <div class="row">
+        <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 m-auto">
+          <div class="row">
+            <div class="col-xl-4 col-lg-4 col-md-4 col-sm-6 p-0">
+              <div class="m-logo-sty">
+                <img src="./assets/images/mw-logo.png" alt="" style="height: 59px;">
+              </div>
+              <div class="disp_flex-footer py-5 m-logo-padd text-white">
+                <p>Spaze I -Tech Park, 1151, Tower B2,<br> Sohna - Gurgaon Rd, Sector 49,<br> Gurugram, Haryana 122018</p>
+                <div class="disp_flex-inn">
+                  <img src="./assets/images/mail-icon.png" alt="">
+                  email <br>info@microwarecorp.com
+                </div>
+                <div class="disp_flex-inn">
+                  <img src="./assets/images/phone-icon.png" alt="">
+                  Call Us <br>(+91) 01240000000
+                </div>
+              </div>
+            </div>
+            <div class="col-xl-4 col-lg-4 col-md-4 col-sm-6 p-0">
+              <div class="m-logo-sty">
+                <h3 class="mb-0" style="padding: 13px 0px;">Pages</h3>
+              </div>
+              <div class="disp_flex-footer py-5 m-logo-padd text-white">
+                <ul class="footer_ul">
+                  <li><a href="index.html">Home</a></li>
+                  <li><a href="offerings.html">Offerings</a></li>
+                  <li><a href="industries.html">Industries</a></li>
+                  <li><a href="about.html">About us</a></li>
+                  <li><a href="case-studies">Case studies</a></li>
+                  <li><a href="carriers.html">Carriers</a></li>
+                  <li><a href="contact.html">Contact us</a></li>
+                  <li><a href="quote.html">Quote</a></li>
+                </ul>
+               
+              </div>
+            </div>
+            <div class="col-xl-4 col-lg-4 col-md-4 col-sm-6 p-0">
+              <div class="m-logo-sty">
+                <h3 class="mb-0" style="padding: 13px 0px;">Get in Touch</h3>
+              </div>
+              <div class="py-5 m-logo-padd text-white">
+                <div class="footer-social mb-3">
+                <a href="#">
+                  <i class="bi bi-facebook"></i>
+                </a>
+                <a href="#">
+                  <i class="bi bi-twitter"></i>
+                </a>
+                <a href="#">
+                  <i class="bi bi-instagram"></i>
+                </a>
+                <a href="#">
+                  <i class="bi bi-linkedin"></i>
+                </a>
+              </div>
+              <a href="request-demo.html" class="btn btn-outline-primary rounded-0">Get a demo</a>
+              <a href="contact.html" class="btn btn-primary rounded-0"><i class="bi bi-telephone-fill"></i> Contact us</a>
+              </div>
+            </div>
+            <div class="col-sm-12 p-0">
+              <div class="m-logo-sty" style="background-color: #003b68;">
+                <div class="copyright-flex">
+                  <small style="color:#ffffff">Copyright © Microware computing consulting pvt ltd. All rights reserved</small>
+                  <ul class="copy-footer">
+                    <li><a href="cookies.html">Cookies</a></li>
+                    <li><a href="legal.html">Legal</a></li>
+                    <li><a href="privacy.html">Privacy</a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      </div>
+      </section>
+      <a href="#" id="scroll" style=""><span></span></a>
+    
+    <script type="text/javascript" src="assets/js/jquery.min.js"></script>
+<script type="text/javascript" src="assets/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="assets/js/all.min.js"></script>
+<script type="text/javascript" src="assets/css/aos/aos.js"></script>
+<script type="text/javascript" src="./assets/js/slick.js"></script>
+<script>
+    $(document).ready(function(){
+  $(window).scroll(function(){
+    if ($(this).scrollTop() > 50) {
+      $("#scroll").fadeIn();
+      } else {
+      $("#scroll").fadeOut();
+    }
+  });
+  
+  $("#scroll").click(function(){
+    $("html, body").animate({ scrollTop: 0 }, 900);
+    return false;
+  });
+});
+  </script>
+<script>
+    $(".govt_logo_slick-slider_4").slick({
+    slidesToShow: 1,
+        slidesToScroll: 1,
+        autoplay: true,
+        autoplaySpeed: 400000000,
+        arrows: true,
+        dots: true,
+        pauseOnHover: false,
+        responsive: [{
+            breakpoint: 768,
+            settings: {
+                slidesToShow: 2
+            }
+        }, {
+            breakpoint: 520,
+            settings: {
+                slidesToShow: 1
+            }
+        }]
+  });
+  </script>
+</body>
+</html>
