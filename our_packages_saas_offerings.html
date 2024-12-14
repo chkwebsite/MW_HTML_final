@@ -1,0 +1,846 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/sites_mainstyle.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/bootstrap-icons.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/all.min.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/aos/aos.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css">
+    <title>|| New_-_Microware ||</title>
+    <style>
+        .img_style{
+    height: 220px;
+    object-fit: cover;
+    object-position: top;
+    border-radius: 6px 6px 0px 0px;
+    box-shadow: 0px 0px 6px #ccc;
+}
+.disp_flx {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 15px;
+}
+/* .nav .nav-item.slick-active {
+  background-color: transparent;
+    border-radius: 12px 12px 12px 12px;
+    text-align: left;
+    border: 1px solid red !important;
+} */
+.nav .nav-item button {
+    background-color: transparent;
+    color: #000000 !important;
+    border-radius: 12px 12px 12px 12px;
+    text-align: left;
+    width: 100%;
+    margin-bottom: 3px;
+    border: 1px solid #ddd;
+}
+/* button .icon_deact{
+    display: block;
+}
+button .icon_act{
+    display: none;
+}
+button.active .icon_act{
+    display: block;
+}
+button.active .icon_deact{
+    display: none;
+} */
+/* button.active span{
+    color: #ffffff;
+}
+button span{
+    color: #508dc4;
+} */
+button.slick-prev {
+    position: absolute;
+    top: 0px;
+    left: calc(50% - 30px);
+    transform: translate(0, -50%);
+    z-index: 100;
+    border-radius: 50%;
+    border: 1px solid #ddd;
+    background-color: #fff;
+    box-shadow: none;
+    width: 35px;
+    height: 35px;
+}
+button.slick-next {
+    position: absolute;
+    top: 0px;
+    left: calc(50% + 30px);
+    transform: translate(0, -50%);
+    z-index: 100;
+    border-radius: 50%;
+    border: 1px solid #ddd;
+    background-color: #fff;
+    box-shadow: none;
+    width: 35px;
+    height: 35px;
+}
+.slick-prev:before {
+    content: "\f078";
+    font-family: 'fontawesome';
+}
+.slick-next:before, [dir=rtl] .slick-prev:before {
+    content: "\f077";
+    font-family: 'fontawesome';
+}
+.our_service_slick-slider button.nav-link {
+    color: #000000 !important;
+    border: 1px solid #dddddd !important;
+    margin-bottom: 10px; 
+    border-radius: 12px; 
+    padding: 5px 15px;  
+    background-color: white;
+    min-height: 57px;
+    text-align: left;
+}
+.our_service_slick-slider button.nav-link:hover {
+    color: #000000 !important;
+    border: 1px solid #dd2121 !important;
+}
+.np.active.show {
+    color: #000000 !important;
+    border: 1px solid #e5243c !important;
+}
+.tab-pane{
+  border-radius: 12px;
+  padding: 30px;
+}
+#pills-Agriculture {    
+  background-color: #e5243c;
+  color: #fff;    
+}
+.zh.active.show {
+    color: #000000 !important;
+    border: 1px solid #dda83c !important;
+}
+#pills-ChildProtection {    
+  background-color: #dda83c;
+  color: #fff;    
+}
+.ghwb.active.show {
+    color: #000000 !important;
+    border: 1px solid #4e9e3a !important;
+}
+#pills-Education {    
+  background-color: #4e9e3a;
+  color: #fff;    
+}
+.qe.active.show {
+    color: #000000 !important;
+    border: 1px solid #c5192f !important;
+}
+#pills-Livelihood {    
+  background-color: #c5192f;
+  color: #fff;    
+}
+.ge.active.show {
+    color: #000000 !important;
+    border: 1px solid #ff3922 !important;
+}
+#pills-Health {    
+  background-color: #ff3922;
+  color: #fff;    
+}
+.cws.active.show {
+    color: #000000 !important;
+    border: 1px solid #27bbe5 !important;
+}
+#pills-Watersanitation {    
+  background-color: #27bbe5;
+  color: #fff;    
+}
+.ace.active.show {
+    color: #000000 !important;
+    border: 1px solid #fcc30d !important;
+}
+#pills-Nutrition {    
+  background-color: #fcc30d;
+  color: #fff;    
+}
+.dweg.active.show {
+    color: #000000 !important;
+    border: 1px solid #a21945 !important;
+}
+#pills-SkillingMicroenterprise {    
+  background-color: #a21945;
+  color: #fff;    
+}
+.iiii.active.show {
+    color: #000000 !important;
+    border: 1px solid #fe6927 !important;
+}
+#pills-MicrofinanceArtculture {    
+  background-color: #fe6927;
+  color: #fff;    
+}
+.ri.active.show {
+    color: #000000 !important;
+    border: 1px solid #df1268 !important;
+}
+#pills-childnutrition {    
+  background-color: #df1268;
+  color: #fff;    
+}
+.scc.active.show {
+    color: #000000 !important;
+    border: 1px solid #ffaf2d !important;
+}
+#pills-waterresources {    
+  background-color: #ffaf2d;
+  color: #fff;    
+}
+/* .np.active.show {
+    color: #000000 !important;
+    border: 1px solid #dd2121 !important;
+} */
+.rcp.active.show {
+    color: #000000 !important;
+    border: 1px solid #cea457 !important;
+}
+#pills-womenempowerment {    
+  background-color: #cea457;
+  color: #fff;    
+}
+.ca.active.show {
+    color: #000000 !important;
+    border: 1px solid #699c6d !important;
+}
+#pills-communityempowerment {    
+  background-color: #699c6d;
+  color: #fff;    
+}
+.lbw.active.show {
+    color: #000000 !important;
+    border: 1px solid #0b97d9 !important;
+}
+#pills-projectmanagement {    
+  background-color: #0b97d9;
+  color: #fff;    
+}
+.ll.active.show {
+    color: #000000 !important;
+    border: 1px solid #56c02a !important;
+}
+#pills-ll {    
+  background-color: #56c02a;
+  color: #fff;    
+}
+.pjsi.active.show {
+    color: #000000 !important;
+    border: 1px solid #00699e !important;
+}
+#pills-pjsi {    
+  background-color: #00699e;
+  color: #fff;    
+}
+.pg.active.show {
+    color: #000000 !important;
+    border: 1px solid #3b6283 !important;
+}
+#pills-pg {    
+  background-color: #3b6283;
+  color: #fff;    
+}
+.disp_center{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    height: 100%;
+}
+/* .slick-list{
+  height: 460px !important;
+} */
+    </style>
+</head>
+<body>
+
+    <section class="header_section">
+        <div class="container-fluid">
+            <div class="row hide-575" style="border-bottom: 1px solid #ddd;">
+                <div class="col-xl-11 col-lg-11 col-md-11 col-sm-12 m-auto p-0">
+                    <nav class="navbar navbar-expand-sm py-0">
+
+                        <div class="container-fluid">
+                          <!-- Links -->
+                          <ul class="navbar-nav ms-auto">
+                            <li class="nav-item">
+                              <a class="nav-link" href="#">
+                                <i class="bi bi-volume-up-fill"></i>
+                              </a>
+                            </li>
+                            <li class="nav-item" style="margin-right: 6px;">
+                                <button type="button" class="btn btn-light border btn-sm rounded-0 mt-1">A-</button>
+                                <button type="button" class="btn btn-light border btn-sm rounded-0 mt-1">A</button>
+                                <button type="button" class="btn btn-light border btn-sm rounded-0 mt-1">A+</button>
+                            </li>
+                            <li class="nav-item">
+                              <a class="nav-link p-1" href="#">
+                                <img src="./assets/images/facebook-icon.png" alt="" style="height: 30px;">
+                              </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link p-1" href="#">
+                                  <img src="./assets/images/insta-icon.png" alt="" style="height: 30px;">
+                                </a>
+                              </li>
+                              <li class="nav-item">
+                                <a class="nav-link p-1" href="#">
+                                  <img src="./assets/images/twitter-icon.png" alt="" style="height: 30px;">
+                                </a>
+                              </li>
+                              <li class="nav-item">
+                                <a class="nav-link p-1" href="#">
+                                  <img src="./assets/images/youtube-icon.png" alt="" style="height: 30px;">
+                                </a>
+                              </li>
+                          </ul>
+                        </div>
+                      
+                      </nav>
+                </div>
+            </div>
+            <div class="row" style="border-bottom: 1px solid #ddd;">
+                <div class="col-xl-11 col-lg-11 col-md-11 col-sm-12 m-auto p-0">
+                    <nav class="navbar navbar-expand-md mw-home">
+                        <div class="container-fluid">
+                          <a class="navbar-brand" href="index.html">
+                            <img src="./assets/images/mw-logo.png" alt="">
+                          </a>
+                          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
+                            <span class="navbar-toggler-icon"></span>
+                          </button>
+                          <div class="collapse navbar-collapse" id="collapsibleNavbar">
+                            <ul class="navbar-nav ms-auto">
+                              <li class="nav-item">
+                                <a class="nav-link" href="about.html">About us</a>
+                              </li>
+                              <li class="nav-item">
+                                <a class="nav-link" href="our_services.html">Our Services</a>
+                              </li>
+                              <li class="nav-item">
+                                <a class="nav-link" href="client_speak.html">Client Speak</a>
+                              </li> 
+                              <li class="nav-item">
+                                <a class="nav-link" href="employee_corner.html">Employee Corner</a>
+                              </li> 
+                              <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Policies</a>
+                                <ul class="dropdown-menu">
+                                  <li><a class="dropdown-item" target="_blank" href="./assets/files/Prevention of Sexual Harassment Policy_Final.pdf">Posh policy</a></li>
+                                  <li><a class="dropdown-item" target="_blank" href="./assets/files/MW_HRManual.pdf">HR manual</a></li>
+                                </ul>
+                              </li>    
+                              <li class="nav-item">
+                                <a class="nav-link" href="contact.html">Contact Us</a>
+                              </li> 
+                              <!-- <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Dropdown</a>
+                                <ul class="dropdown-menu">
+                                  <li><a class="dropdown-item" href="#">Link</a></li>
+                                  <li><a class="dropdown-item" href="#">Another link</a></li>
+                                  <li><a class="dropdown-item" href="#">A third link</a></li>
+                                </ul>
+                              </li> -->
+                            </ul>
+                          </div>
+                        </div>
+                      </nav>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    
+
+    <section class="about_section">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-sm-12 p-0">
+                    <div class="position-relative">
+                        <img src="./assets/images/package_bann.png" width="100%" alt="">
+                        <div class="upper_layerinn text-white">
+                          <div>
+                            <h1 class="text-center">
+                               "Packages / Saas"
+                            </h1>
+                            <p class="text-center">Empowering businesses and social impact through 
+                              innovative,<br> practical software solutions tailored for excellence.</p>
+                          </div>
+                    </div>
+                </div>
+                </div>
+            </div>
+            <div class="row" style="background-color: #E1F1FF;">
+                <div class="col-xl-11 col-lg-11 col-md-11 col-sm-12 m-auto">
+                    <div class="row py-5">
+                        <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12">
+                            <img class="w-100" src="./assets/images/pack_inn-bann.png" alt="">
+                        </div>
+                        <div class="col-xl-8 col-lg-8 col-md-8 col-sm-12">
+                            <div class="disp_center">
+                                <h3 class="px-4 bb mb-4">Development Sector</h3>
+                                <p class="px-4">
+                                    Microware has collaborated with the best to provide practical computing solutions for development projects. Multi-facted, multi-disciplinary teams are required for these deliveries, and we have been the preferred partners for various agencies in this domain. We have delivered solutions in the following sectors.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row pt-3 pb-4">
+                <div class="col-xl-11 col-lg-11 col-md-11 col-sm-12 m-auto" style="background-color: white;">
+                    <div class="row">
+                        <div class="col-sm-12 pb-5">
+                            <div class="disp_flx">
+                            <h2 class="mb-0 head-color bb">Telecom</h2>
+                            </div>
+                        </div>
+                        <div class="col-sm-12 m-auto">
+                            <div class="row">
+
+                                <div class="col-xl-3 col-lg-3 col-md-4 col-sm-12">
+                                  <div class="our_service_slick-slider " id="pills-tab" role="tablist" style="border: 0px solid #a6aac1;">
+                                    
+                                        <button class="nav-link np active show fw-semibold position-relative active" id="pills-Agriculture-tab" 
+                                        data-bs-toggle="pill" data-bs-target="#pills-Agriculture" type="button" role="tab" aria-controls="pills-Agriculture" 
+                                        aria-selected="true">
+                                        <div class="disp_flx">
+                                          <img class="icon_deact" src="assets/images/np.png" style="height:40px">
+                                            <span>Core Proficiencies</span>  
+                                        </div>
+                                        </button>
+                                      
+                                        <button class="nav-link zh fw-semibold position-relative" id="pills-ChildProtection-tab" 
+                                        data-bs-toggle="pill" data-bs-target="#pills-ChildProtection" type="button" role="tab" 
+                                        aria-controls="pills-ChildProtection" aria-selected="false">
+                                        <div class="disp_flx">
+                                          <img class="icon_deact" src="assets/images/zh.png" style="height:40px">
+                                            <span>Contact Center Application packages</span>  
+                                        </div>                                        
+                                        </button>
+                                     
+                                        <button class="nav-link ghwb fw-semibold position-relative" id="pills-Education-tab" 
+                                        data-bs-toggle="pill" data-bs-target="#pills-Education" type="button" role="tab" 
+                                        aria-controls="pills-Education" aria-selected="false">
+                                        <div class="disp_flx">
+                                          <img class="icon_deact" src="assets/images/ghwb.png" style="height:40px">
+                                            <span>MicroCVT / MicroAVS</span>  
+                                        </div>   
+                                        </button>
+                                      
+                                        <button class="nav-link qe fw-semibold position-relative" id="pills-Livelihood-tab" 
+                                        data-bs-toggle="pill" data-bs-target="#pills-Livelihood" type="button" role="tab" 
+                                        aria-controls="pills-Livelihood" aria-selected="false">
+                                        <div class="disp_flx">
+                                          <img class="icon_deact" src="assets/images/qe.png" style="height:40px">
+                                            <span>Feedback Analysis</span>  
+                                        </div>   
+                                        </button>
+                                      
+                                        <button class="nav-link ge fw-semibold position-relative" id="pills-Health-tab" 
+                                        data-bs-toggle="pill" data-bs-target="#pills-Health" type="button" role="tab" 
+                                        aria-controls="pills-Health" aria-selected="false">
+                                        <div class="disp_flx">
+                                          <img class="icon_deact" src="assets/images/ge.png" style="height:40px">
+                                            <span>ECHI Loader</span>  
+                                        </div>   
+                                        </button>
+                                      
+                                        <button class="nav-link cws fw-semibold position-relative" id="pills-Watersanitation-tab" 
+                                        data-bs-toggle="pill" data-bs-target="#pills-Watersanitation" type="button" role="tab" 
+                                        aria-controls="pills-Watersanitation" aria-selected="false">
+                                        <div class="disp_flx">
+                                          <img class="icon_deact" src="assets/images/cws.png" style="height:40px">
+                                            <span>CMS - Multi-time zone reporting</span>  
+                                        </div>   
+                                        </button>
+                                      
+                                        <button class="nav-link ace fw-semibold position-relative" id="pills-Nutrition-tab" 
+                                        data-bs-toggle="pill" data-bs-target="#pills-Nutrition" type="button" role="tab" 
+                                        aria-controls="pills-Nutrition" aria-selected="false">
+                                        <div class="disp_flx">
+                                          <img class="icon_deact" src="assets/images/ace.png" style="height:40px">
+                                            <span>Contact Center Application packages</span>  
+                                        </div>   
+                                        </button>
+                                      
+                                        <button class="nav-link dweg fw-semibold position-relative" id="pills-SkillingMicroenterprise-tab" 
+                                        data-bs-toggle="pill" data-bs-target="#pills-SkillingMicroenterprise" type="button" role="tab" 
+                                        aria-controls="pills-SkillingMicroenterprise" aria-selected="false">
+                                        <div class="disp_flx">
+                                          <img class="icon_deact" src="assets/images/dweg.png" style="height:40px">
+                                            <span>MicroCVT / MicroAVS</span>  
+                                        </div>   
+                                        </button>
+                                      
+                                        <button class="nav-link iiii fw-semibold position-relative" id="pills-MicrofinanceArtculture-tab" 
+                                        data-bs-toggle="pill" data-bs-target="#pills-MicrofinanceArtculture" type="button" role="tab" 
+                                        aria-controls="pills-MicrofinanceArtculture" aria-selected="false">
+                                        <div class="disp_flx">
+                                          <img class="icon_deact" src="assets/images/iiii.png" style="height:40px">
+                                            <span>Feedback Analysis</span>  
+                                        </div>   
+                                        </button>
+                                      
+                                        <button class="nav-link ri fw-semibold position-relative" id="pills-childnutrition-tab" 
+                                        data-bs-toggle="pill" data-bs-target="#pills-childnutrition" type="button" role="tab" 
+                                        aria-controls="pills-childnutrition" aria-selected="false">
+                                        <div class="disp_flx">
+                                          <img class="icon_deact" src="assets/images/ri.png" style="height:40px">
+                                            <span>ECHI Loader</span>  
+                                        </div>   
+                                        </button>
+                                      
+                                        <button class="nav-link scc fw-semibold position-relative" id="pills-waterresources-tab" 
+                                        data-bs-toggle="pill" data-bs-target="#pills-waterresources" type="button" role="tab" 
+                                        aria-controls="pills-waterresources" aria-selected="false">
+                                        <div class="disp_flx">
+                                          <img class="icon_deact" src="assets/images/scc.png" style="height:40px">
+                                            <span>CMS - Multi-time zone reporting</span>  
+                                        </div>   
+                                        </button>
+                                      
+                                        <button class="nav-link rcp fw-semibold position-relative" id="pills-womenempowerment-tab" 
+                                        data-bs-toggle="pill" data-bs-target="#pills-womenempowerment" type="button" role="tab" 
+                                        aria-controls="pills-womenempowerment" aria-selected="false">
+                                        <div class="disp_flx">
+                                          <img class="icon_deact" src="assets/images/rcp.png" style="height:40px">
+                                            <span>TPIN Server</span>  
+                                        </div>   
+                                        </button>
+                                      
+                                        <button class="nav-link ca fw-semibold position-relative" id="pills-communityempowerment-tab" 
+                                        data-bs-toggle="pill" data-bs-target="#pills-communityempowerment" type="button" role="tab" 
+                                        aria-controls="pills-communityempowerment" aria-selected="false">
+                                        <div class="disp_flx">
+                                          <img class="icon_deact" src="assets/images/ca.png" style="height:40px">
+                                            <span>REAL TIME Software/Applicationsr</span>  
+                                        </div>   
+                                        </button>
+                                      
+                                        <button class="nav-link lbw fw-semibold position-relative" id="pills-projectmanagement-tab" 
+                                        data-bs-toggle="pill" data-bs-target="#pills-projectmanagement" type="button" role="tab" 
+                                        aria-controls="pills-projectmanagement" aria-selected="false">
+                                        <div class="disp_flx">
+                                          <img class="icon_deact" src="assets/images/lbw.png" style="height:40px">
+                                            <span>Syslog</span>  
+                                        </div>   
+                                        </button>
+                                        <!-- NEW  -->
+                                        <button class="nav-link ll fw-semibold position-relative" id="pills-ll-tab" 
+                                        data-bs-toggle="pill" data-bs-target="#pills-ll" type="button" role="tab" 
+                                        aria-controls="pills-ll" aria-selected="false">
+                                        <div class="disp_flx">
+                                          <img class="icon_deact" src="assets/images/ll.png" style="height:40px">
+                                            <span>DNC compliance</span>  
+                                        </div>   
+                                        </button>
+
+                                        <button class="nav-link pjsi fw-semibold position-relative" id="pills-pjsi-tab" 
+                                        data-bs-toggle="pill" data-bs-target="#pills-pjsi" type="button" role="tab" 
+                                        aria-controls="pills-pjsi" aria-selected="false">
+                                        <div class="disp_flx">
+                                          <img class="icon_deact" src="assets/images/pjsi.png" style="height:40px">
+                                            <span>Built Solutions</span>  
+                                        </div>   
+                                        </button>
+
+                                        <button class="nav-link pg fw-semibold position-relative" id="pills-pg-tab" 
+                                        data-bs-toggle="pill" data-bs-target="#pills-pg" type="button" role="tab" 
+                                        aria-controls="pills-pg" aria-selected="false">
+                                        <div class="disp_flx">
+                                          <img class="icon_deact" src="assets/images/pg.png" style="height:40px">
+                                            <span>Screen POP</span>  
+                                        </div>   
+                                        </button>
+                                  </div>
+                                    
+                                    </div>
+                                    <div class="col-xl-9 col-lg-9 col-md-8 col-sm-12">
+                                    <div class="tab-content border1 rounded-3 border-primary1 pt-0 p-3 w-100" id="pills-tabContent">
+                                      <div class="tab-pane fade show active" id="pills-Agriculture" role="tabpanel" aria-labelledby="pills-Agriculture-tab">
+                                        <img src="./assets/images/np.png" alt="">
+                                        <h2 class="mt-3">Core Proficiencies</h2>
+                                        <div class="row">
+                                            <div class="col-am-12">
+                                                <p style="text-align: justify;">
+                                                    Microware&nbsp;has engaged with multiple Agri programs, both as part 
+                                                        of their livelihood initiatives, and otherwise. The more 
+                                                        prominent programs, other than larger livelihood systems, 
+                                                        include Reliance BIJ (Bharat India Jodo) across 26 clusters in 
+                                                        India, The Axis Bank Foundation efforts across India, ASI 
+                                                        Walmart’s interventions in UP and AP, Reviving the Green 
+                                                        Revolution of the Tata Trusts in Punjab and Tamil Nadu, and 
+                                                        various SRI, market linkage and crop monitoring software for 
+                                                        various programmes, including the Mahila Kisan Sashaktiran 
+                                                        Pariyojana in Jharkhand .  The software currently in use 
+                                                        include generic definitions for crop monitoring, and provide 
+                                                        for analysis of yield and price realisation, including 
+                                                        monitoring of Producer Groups and co-operatives. Some systems 
+                                                        follow the entire crop cycle, and also keep track the payments 
+                                                        due to community resources for agriculture and animal husbandry. 
+                                                        Systems have been built for animal husbandry, micro enterprises 
+                                                        and market linkages.
+                                                </p>
+                                            </div>
+                                        </div>
+
+                                        <div class="row mt-4">
+                                            <div class="col-am-12">
+                                                <p style="text-align: justify;">
+                                                    Microware&nbsp;has engaged with multiple Agri programs, both as part 
+                                                        of their livelihood initiatives, and otherwise. The more 
+                                                        prominent programs, other than larger livelihood systems, 
+                                                        include Reliance BIJ (Bharat India Jodo) across 26 clusters in 
+                                                        India, The Axis Bank Foundation efforts across India, ASI 
+                                                        Walmart’s interventions in UP and AP, Reviving the Green 
+                                                        Revolution of the Tata Trusts in Punjab and Tamil Nadu, and 
+                                                        various SRI, market linkage and crop monitoring software for 
+                                                        various programmes, including the Mahila Kisan Sashaktiran 
+                                                        Pariyojana in Jharkhand .  The software currently in use 
+                                                        include generic definitions for crop monitoring, and provide 
+                                                        for analysis of yield and price realisation, including 
+                                                        monitoring of Producer Groups and co-operatives. Some systems 
+                                                        follow the entire crop cycle, and also keep track the payments 
+                                                        due to community resources for agriculture and animal husbandry. 
+                                                        Systems have been built for animal husbandry, micro enterprises 
+                                                        and market linkages.
+                                                </p>
+                                            </div>
+                                        </div>
+                                        
+                                        
+                                      </div>
+                                      <div class="tab-pane fade" id="pills-ChildProtection" role="tabpanel" aria-labelledby="pills-ChildProtection-tab">
+                                        <h2>Child Protection & Gender</h2>
+                                        <p>Please check our more design @ <a target="_blank" href="https://codepen.io/Gaurav-Rana-the-reactor">Codepen</a></p>
+                                      </div>
+                                      <div class="tab-pane fade" id="pills-Education" role="tabpanel" aria-labelledby="pills-Education-tab">
+                                        <h2>Education</h2>
+                                        <p>Please check our more design @ <a target="_blank" href="https://codepen.io/Gaurav-Rana-the-reactor">Codepen</a></p>
+                                      </div>
+
+                                      <div class="tab-pane fade" id="pills-Livelihood" role="tabpanel" aria-labelledby="pills-Livelihood-tab">
+                                        <h2>Livelihood</h2>
+                                        <p>Please check our more design @ <a target="_blank" href="https://codepen.io/Gaurav-Rana-the-reactor">Codepen</a></p>
+                                      </div>
+
+                                      <div class="tab-pane fade" id="pills-Health" role="tabpanel" aria-labelledby="pills-Health-tab">
+                                        <h2>Health</h2>
+                                        <p>Please check our more design @ <a target="_blank" href="https://codepen.io/Gaurav-Rana-the-reactor">Codepen</a></p>
+                                      </div>
+
+                                      <div class="tab-pane fade" id="pills-Watersanitation" role="tabpanel" aria-labelledby="pills-Watersanitation-tab">
+                                        <h2>Water & sanitation</h2>
+                                        <p>Please check our more design @ <a target="_blank" href="https://codepen.io/Gaurav-Rana-the-reactor">Codepen</a></p>
+                                      </div>
+
+                                      <div class="tab-pane fade" id="pills-Nutrition" role="tabpanel" aria-labelledby="pills-Nutrition-tab">
+                                        <h2>Nutrition</h2>
+                                        <p>Please check our more design @ <a target="_blank" href="https://codepen.io/Gaurav-Rana-the-reactor">Codepen</a></p>
+                                      </div>
+
+                                      <div class="tab-pane fade" id="pills-SkillingMicroenterprise" role="tabpanel" aria-labelledby="pills-SkillingMicroenterprise-tab">
+                                        <h2>Skilling & Microenterprise</h2>
+                                        <p>Please check our more design @ <a target="_blank" href="https://codepen.io/Gaurav-Rana-the-reactor">Codepen</a></p>
+                                      </div>
+
+                                      <div class="tab-pane fade" id="pills-MicrofinanceArtculture" role="tabpanel" aria-labelledby="pills-MicrofinanceArtculture-tab">
+                                        <h2>Microfinance & Art culture</h2>
+                                        <p>Please check our more design @ <a target="_blank" href="https://codepen.io/Gaurav-Rana-the-reactor">Codepen</a></p>
+                                      </div>
+
+                                      <div class="tab-pane fade" id="pills-childnutrition" role="tabpanel" aria-labelledby="pills-childnutrition-tab">
+                                        <h2>child nutrition</h2>
+                                        <p>Please check our more design @ <a target="_blank" href="https://codepen.io/Gaurav-Rana-the-reactor">Codepen</a></p>
+                                      </div>
+
+                                      <div class="tab-pane fade" id="pills-waterresources" role="tabpanel" aria-labelledby="pills-waterresources-tab">
+                                        <h2>water resources</h2>
+                                        <p>Please check our more design @ <a target="_blank" href="https://codepen.io/Gaurav-Rana-the-reactor">Codepen</a></p>
+                                      </div>
+
+                                      <div class="tab-pane fade" id="pills-womenempowerment" role="tabpanel" aria-labelledby="pills-womenempowerment-tab">
+                                        <h2>women empowerment</h2>
+                                        <p>Please check our more design @ <a target="_blank" href="https://codepen.io/Gaurav-Rana-the-reactor">Codepen</a></p>
+                                      </div>
+
+                                      <div class="tab-pane fade" id="pills-communityempowerment" role="tabpanel" aria-labelledby="pills-communityempowerment-tab">
+                                        <h2>Community empowerment</h2>
+                                        <p>Please check our more design @ <a target="_blank" href="https://codepen.io/Gaurav-Rana-the-reactor">Codepen</a></p>
+                                      </div>
+
+                                      <div class="tab-pane fade" id="pills-projectmanagement" role="tabpanel" aria-labelledby="pills-projectmanagement-tab">
+                                        <h2>Project management</h2>
+                                        <p>Please check our more design @ <a target="_blank" href="https://codepen.io/Gaurav-Rana-the-reactor">Codepen</a></p>
+                                      </div>
+
+                                      <div class="tab-pane fade" id="pills-ll" role="tabpanel" aria-labelledby="pills-ll-tab">
+                                        <h2>Life on Land</h2>
+                                        <p>Please check our more design @ <a target="_blank" href="https://codepen.io/Gaurav-Rana-the-reactor">Codepen</a></p>
+                                      </div>
+
+                                      <div class="tab-pane fade" id="pills-pjsi" role="tabpanel" aria-labelledby="pills-pjsi-tab">
+                                        <h2>Peace Justice & Strong Institutions</h2>
+                                        <p>Please check our more design @ <a target="_blank" href="https://codepen.io/Gaurav-Rana-the-reactor">Codepen</a></p>
+                                      </div>
+
+                                      <div class="tab-pane fade" id="pills-pg" role="tabpanel" aria-labelledby="pills-pg-tab">
+                                        <h2>Partnerships & Goals</h2>
+                                        <p>Please check our more design @ <a target="_blank" href="https://codepen.io/Gaurav-Rana-the-reactor">Codepen</a></p>
+                                      </div>
+                                    </div>
+                                  </div>
+
+
+
+
+
+
+                               
+            
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            </div>
+    </section>
+
+
+    <section class="footer_n bg-f">
+        <div class="container-fluid">
+      <div class="row">
+        <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 m-auto">
+          <div class="row">
+            <div class="col-xl-4 col-lg-4 col-md-4 col-sm-6 p-0">
+              <div class="m-logo-sty">
+                <img src="./assets/images/mw-logo.png" alt="" style="height: 59px;">
+              </div>
+              <div class="disp_flex-footer py-5 m-logo-padd text-white">
+                <p>Spaze I -Tech Park, 1151, Tower B2,<br> Sohna - Gurgaon Rd, Sector 49,<br> Gurugram, Haryana 122018</p>
+                <div class="disp_flex-inn">
+                  <img src="./assets/images/mail-icon.png" alt="">
+                  email <br>info@microwarecorp.com
+                </div>
+                <div class="disp_flex-inn">
+                  <img src="./assets/images/phone-icon.png" alt="">
+                  Call Us <br>(+91) 01240000000
+                </div>
+              </div>
+            </div>
+            <div class="col-xl-4 col-lg-4 col-md-4 col-sm-6 p-0">
+              <div class="m-logo-sty">
+                <h3 class="mb-0" style="padding: 13px 0px;">Pages</h3>
+              </div>
+              <div class="disp_flex-footer py-5 m-logo-padd text-white">
+                <ul class="footer_ul">
+                  <li><a href="index.html">Home</a></li>
+                  <li><a href="offerings.html">Offerings</a></li>
+                  <li><a href="industries.html">Industries</a></li>
+                  <li><a href="about.html">About us</a></li>
+                  <li><a href="case-studies">Case studies</a></li>
+                  <li><a href="carriers.html">Carriers</a></li>
+                  <li><a href="contact.html">Contact us</a></li>
+                  <li><a href="quote.html">Quote</a></li>
+                </ul>
+               
+              </div>
+            </div>
+            <div class="col-xl-4 col-lg-4 col-md-4 col-sm-6 p-0">
+              <div class="m-logo-sty">
+                <h3 class="mb-0" style="padding: 13px 0px;">Get in Touch</h3>
+              </div>
+              <div class="py-5 m-logo-padd text-white">
+                <div class="footer-social mb-3">
+                <a href="#">
+                  <i class="bi bi-facebook"></i>
+                </a>
+                <a href="#">
+                  <i class="bi bi-twitter"></i>
+                </a>
+                <a href="#">
+                  <i class="bi bi-instagram"></i>
+                </a>
+                <a href="#">
+                  <i class="bi bi-linkedin"></i>
+                </a>
+              </div>
+              <a href="request-demo.html" class="btn btn-outline-primary rounded-0">Get a demo</a>
+              <a href="contact.html" class="btn btn-primary rounded-0"><i class="bi bi-telephone-fill"></i> Contact us</a>
+              </div>
+            </div>
+            <div class="col-sm-12 p-0">
+              <div class="m-logo-sty" style="background-color: #003b68;">
+                <div class="copyright-flex">
+                  <small style="color:#ffffff">Copyright © Microware computing consulting pvt ltd. All rights reserved</small>
+                  <ul class="copy-footer">
+                    <li><a href="cookies.html">Cookies</a></li>
+                    <li><a href="legal.html">Legal</a></li>
+                    <li><a href="privacy.html">Privacy</a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      </div>
+      </section>
+      <a href="#" id="scroll" style=""><span></span></a>
+    
+    <script type="text/javascript" src="assets/js/jquery.min.js"></script>
+<script type="text/javascript" src="assets/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="assets/js/all.min.js"></script>
+<script type="text/javascript" src="assets/css/aos/aos.js"></script>
+<script type="text/javascript" src="./assets/js/slick.js"></script>
+<script>
+    $(document).ready(function(){
+  $(window).scroll(function(){
+    if ($(this).scrollTop() > 50) {
+      $("#scroll").fadeIn();
+      } else {
+      $("#scroll").fadeOut();
+    }
+  });
+  
+  $("#scroll").click(function(){
+    $("html, body").animate({ scrollTop: 0 }, 900);
+    return false;
+  });
+});
+  </script>
+<script>
+  $(".our_service_slick-slider").slick({
+  slidesToShow: 6,
+      slidesToScroll: 1,
+      autoplay: false,
+      //autoplaySpeed: 5000,
+      vertical: true,
+      verticalSwiping: true,
+      arrows: true,
+      dots: false,
+      pauseOnHover: false,
+      responsive: [{
+          breakpoint: 768,
+          settings: {
+              slidesToShow: 6
+          }
+      }, {
+          breakpoint: 520,
+          settings: {
+              slidesToShow: 6
+          }
+      }]
+});
+</script>
+</body>
+</html>

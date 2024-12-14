@@ -1,0 +1,593 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>NVHCP</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel="stylesheet" type="text/css" href="assets/css/bootstrap.min.css">
+    <script src='main.js'></script>
+    <style>
+        .table tr th, .table tr td{
+            vertical-align: middle;
+            min-width: 180px;
+        }
+        .table thead tr th{
+            text-align: center;
+        }
+        .table thead tr:nth-last-child(1) td{
+            text-align: center;
+        }
+        .table tr th:nth-child(1){
+            min-width: 50px;
+        }
+        .colspn-10-gray{
+            background-color:#f2f2f2 !important;
+        }
+        .colspn-12-green {
+            background-color: #c5e0b2 !important;
+        }
+        .colspn-12-yellow{
+            background-color:#ffe799 !important;
+        }
+        .colspn-12-lightred{
+            background-color:#fbe4d5 !important
+        }
+        .colspn-12-darkblue{
+            background-color:#b3c6e7 !important
+        }
+        .colspn-12-lightblue{
+            background-color:#acb9ca !important
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="table-responsive">
+                <table class="table table-striped table-bordered">
+                    <thead>
+                        <tr>
+                            <th colspan="4">Monthly Report under NVHCP</th>
+                            <th class="colspn-10-gray" colspan="10" >1. Infrastructure</th>
+                            <th colspan="8">&nbsp;</th>
+                            <th colspan="8">&nbsp;</th>
+                            <th colspan="8">&nbsp;</th>
+
+                            <th class="colspn-12-green" colspan="8">5. Immunization / Vaccination for Hepatitis B</th>
+                            <th class="colspn-12-green" colspan="12">Total number of persons screened for Hepatitis B</th>
+                            <th class="colspn-12-green" colspan="12">Total number of persons found positive for Hepatitis B</th>
+                            <th class="colspn-12-green" colspan="12">Total number of Hepatitis B positive patients tested for viral load</th>
+                            <th class="colspn-12-green" colspan="12">Total number of patients found eligible for treatment of Hepatitis B</th>
+                            <th class="colspn-12-green" colspan="12">Total number of patients put on treatment of Hepatitis B</th>
+                            
+                            <th class="colspn-12-yellow" colspan="12">Total number of persons screened for Hepatitis C</th>
+                            <th class="colspn-12-yellow" colspan="12">Total number of persons found positive for Hepatitis C (Anti HCV)</th>
+                            <th class="colspn-12-yellow" colspan="12">Total number Hepatitis C positive patients tested for viral load </th>
+                            <th class="colspn-12-yellow" colspan="12">Total number of patients found eligible for treatment for hepatitis C</th>
+                            <th class="colspn-12-yellow" colspan="12">Total number of patients put on treatment for Hepatitis C</th>
+                            <th class="colspn-12-yellow" colspan="12">Total number of Hepatitis C patients completed treatment</th>
+                            <th class="colspn-12-yellow" colspan="12">Total number of patients tested for HCV RNA on Sustained virologic response at 12 weeks (SVR 12)</th>
+                            <th class="colspn-12-yellow" colspan="12">Total number of patients cleared for HCV RNA on Sustained virologic response at 12 weeks (SVR 12)</th>
+                            <th rowspan="3">Remarks (If any)</th>
+                            <th rowspan="3">Action</th>
+                        </tr>
+                        <tr>
+                            <th>FY:</th>
+                            <th>&nbsp;</th>
+                            <th>Month Name:</th>
+                            <th>&nbsp;</th>
+                            <th class="colspn-10-gray" colspan="6">1.1 Facilities Information under NVHCP</th>
+                            <th class="colspn-10-gray" colspan="4">1.2 Laboratories Information under NVHCP</th>
+                            <th class="colspn-12-green" colspan="8">2.1 Hepatitis B</th>
+                            <th class="colspn-12-lightred" colspan="6">3.1 Pregnant Women / Antenatal care (ANC)</th>
+                            <th class="colspn-12-yellow" colspan="10">4.1 Hepatitis C</th>
+                            <th class="colspn-12-darkblue" colspan="4">5.1 Immunization of Health care Workers (HCWs)</th>
+                            <th class="colspn-12-lightblue" colspan="4">5.2 Vaccination of High Risk Groups (HRGs) Screened negative for HBsAg</th>
+                            
+                            <th class="colspn-12-green" rowspan="2">General Population</th>
+                            <th class="colspn-12-green" colspan="5">High Risk Groups (HRGs)</th>
+                            <th class="colspn-12-green" colspan="2">Bridge Populations (BPs)</th>
+                            <th class="colspn-12-green" colspan="3">Other Populations</th>
+                            <th class="colspn-12-green" rowspan="2">Grand total</th>
+
+                            <th class="colspn-12-green" rowspan="2">General Population</th>
+                            <th class="colspn-12-green" colspan="5">High Risk Groups (HRGs)</th>
+                            <th class="colspn-12-green" colspan="2">Bridge Populations (BPs)</th>
+                            <th class="colspn-12-green" colspan="3">Other Populations</th>
+                            <th class="colspn-12-green" rowspan="2">Grand total</th>
+
+                            <th class="colspn-12-green" rowspan="2">General Population</th>
+                            <th class="colspn-12-green" colspan="5">High Risk Groups (HRGs)</th>
+                            <th class="colspn-12-green" colspan="2">Bridge Populations (BPs)</th>
+                            <th class="colspn-12-green" colspan="3">Other Populations</th>
+                            <th class="colspn-12-green" rowspan="2">Grand total</th>
+
+                            <th class="colspn-12-green" rowspan="2">General Population</th>
+                            <th class="colspn-12-green" colspan="5">High Risk Groups (HRGs)</th>
+                            <th class="colspn-12-green" colspan="2">Bridge Populations (BPs)</th>
+                            <th class="colspn-12-green" colspan="3">Other Populations</th>
+                            <th class="colspn-12-green" rowspan="2">Grand total</th>
+
+                            <th class="colspn-12-green" rowspan="2">General Population</th>
+                            <th class="colspn-12-green" colspan="5">High Risk Groups (HRGs)</th>
+                            <th class="colspn-12-green" colspan="2">Bridge Populations (BPs)</th>
+                            <th class="colspn-12-green" colspan="3">Other Populations</th>
+                            <th class="colspn-12-green" rowspan="2">Grand total</th>
+
+                            <th class="colspn-12-yellow" rowspan="2">General Population</th>
+                            <th class="colspn-12-yellow" colspan="5">High Risk Groups (HRGs)</th>
+                            <th class="colspn-12-yellow" colspan="2">Bridge Populations (BPs)</th>
+                            <th class="colspn-12-yellow" colspan="3">Other Populations</th>
+                            <th class="colspn-12-yellow" rowspan="2">Grand total</th>
+
+                            <th class="colspn-12-yellow" rowspan="2">General Population</th>
+                            <th class="colspn-12-yellow" colspan="5">High Risk Groups (HRGs)</th>
+                            <th class="colspn-12-yellow" colspan="2">Bridge Populations (BPs)</th>
+                            <th class="colspn-12-yellow" colspan="3">Other Populations</th>
+                            <th class="colspn-12-yellow" rowspan="2">Grand total</th>
+
+                            <th class="colspn-12-yellow" rowspan="2">General Population</th>
+                            <th class="colspn-12-yellow" colspan="5">High Risk Groups (HRGs)</th>
+                            <th class="colspn-12-yellow" colspan="2">Bridge Populations (BPs)</th>
+                            <th class="colspn-12-yellow" colspan="3">Other Populations</th>
+                            <th class="colspn-12-yellow" rowspan="2">Grand total</th>
+
+                            <th class="colspn-12-yellow" rowspan="2">General Population</th>
+                            <th class="colspn-12-yellow" colspan="5">High Risk Groups (HRGs)</th>
+                            <th class="colspn-12-yellow" colspan="2">Bridge Populations (BPs)</th>
+                            <th class="colspn-12-yellow" colspan="3">Other Populations</th>
+                            <th class="colspn-12-yellow" rowspan="2">Grand total</th>
+
+                            <th class="colspn-12-yellow" rowspan="2">General Population</th>
+                            <th class="colspn-12-yellow" colspan="5">High Risk Groups (HRGs)</th>
+                            <th class="colspn-12-yellow" colspan="2">Bridge Populations (BPs)</th>
+                            <th class="colspn-12-yellow" colspan="3">Other Populations</th>
+                            <th class="colspn-12-yellow" rowspan="2">Grand total</th>
+
+                            <th class="colspn-12-yellow" rowspan="2">General Population</th>
+                            <th class="colspn-12-yellow" colspan="5">High Risk Groups (HRGs)</th>
+                            <th class="colspn-12-yellow" colspan="2">Bridge Populations (BPs)</th>
+                            <th class="colspn-12-yellow" colspan="3">Other Populations</th>
+                            <th class="colspn-12-yellow" rowspan="2">Grand total</th>
+
+                            <th class="colspn-12-yellow" rowspan="2">General Population</th>
+                            <th class="colspn-12-yellow" colspan="5">High Risk Groups (HRGs)</th>
+                            <th class="colspn-12-yellow" colspan="2">Bridge Populations (BPs)</th>
+                            <th class="colspn-12-yellow" colspan="3">Other Populations</th>
+                            <th class="colspn-12-yellow" rowspan="2">Grand total</th>
+
+                            <th class="colspn-12-yellow" rowspan="2">General Population</th>
+                            <th class="colspn-12-yellow" colspan="5">High Risk Groups (HRGs)</th>
+                            <th class="colspn-12-yellow" colspan="2">Bridge Populations (BPs)</th>
+                            <th class="colspn-12-yellow" colspan="3">Other Populations</th>
+                            <th class="colspn-12-yellow" rowspan="2">Grand total</th>
+                        </tr>
+                        <tr>
+                            <th>Sr.N.</th>
+                            <th>State / UTs</th>
+                            <th>Email</th>
+                            <th>Total Number of Districts in your state/UTs</th>
+                            <th class="colspn-10-gray">Number of districts with at least one Treatment centre (TC)</th>
+                            <th class="colspn-10-gray">Number of Model Treatment Centers (MTCs): Target (as approved in ROP)</th>
+                            <th class="colspn-10-gray">Number of Model Treatment Centers (MTCs): Progress</th>
+                            <th class="colspn-10-gray">Number of Treatment Centers: Target</th>
+                            <th class="colspn-10-gray">Number of Treatment Centers: Progress</th>
+                            <th class="colspn-10-gray">Number of Treatment Providers (TPs): Progress</th>
+                            <th class="colspn-10-gray">Number of State Labs established: Target</th>
+                            <th class="colspn-10-gray">Number of State Labs: Progress</th>
+                            <th class="colspn-10-gray">Number of District Labs: Target</th>
+                            <th class="colspn-10-gray">Number of District Labs: Progress</th>
+                            
+                            <th class="colspn-12-green">Total number of persons screened for Hepatitis B (excluding ANC)</th>
+                            <th class="colspn-12-green">Total number of persons found positive for Hepatitis B (excluding ANC)</th>
+                            <th class="colspn-12-green">Total number of Hepatitis B positive patients tested for viral load</th>
+                            <th class="colspn-12-green">Total number of patients found eligible for treatment of Hepatitis B</th>
+                            <th class="colspn-12-green">Total number of patients put on treatment of Hepatitis B</th>
+                            <th style="background-color: #ffc000;">No of patients who put on the treatment of Hepatitis B continuing on treatment (Cumulative)</th>
+                            <th class="colspn-12-green">Total number of deaths among the Hepatitis B patients</th>
+                            <th class="colspn-12-green">Total number of hepatitis B patients detected for Primary hepatocellular cancer (HCC)</th>
+                            
+                            <th class="colspn-12-lightred">Number of pregnant women tested for HBsAg</th>
+                            <th class="colspn-12-lightred">Number of pregnant women who are HBsAg positive</th>
+                            <th class="colspn-12-lightred">Number of pregnant women found positive for HBsAg referred to higher centre for institutional delivery</th>
+                            <th class="colspn-12-lightred">Number of pregnant women found positive for HBsAg delivered in institution</th>
+                            <th class="colspn-12-lightred">Number of newborn to pregnant women (found positive for HBsAg) received hepatitis B birth dose</th>
+                            <th class="colspn-12-lightred">Number of newborn to pregnant women (found positive for HBsAg) received HBIG</th>
+                            
+                            <th class="colspn-12-yellow">Total number of persons screened for Hepatitis C</th>
+                            <th class="colspn-12-yellow">Total number of persons found positive for Hepatitis C (Anti HCV)</th>
+                            <th class="colspn-12-yellow">Total number Hep C positive patients tested for viral load</th>
+                            <th class="colspn-12-yellow">Total number of patients found eligible for treatment</th>
+                            <th class="colspn-12-yellow">Total number of patients put on treatment</th>
+                            <th class="colspn-12-yellow">Total number of Hepatitis C patients completed treatment</th>
+                            <th class="colspn-12-yellow">Total number of patients tested for HCV RNA on Sustained virologic response at 12 weeks (SVR 12)</th>
+                            <th class="colspn-12-yellow">Total number of patients cleared for HCV RNA on Sustained virologic response at 12 weeks (SVR 12)</th>
+                            <th class="colspn-12-yellow">Total number of deaths among the hepatitis C patients</th>
+                            <th class="colspn-12-yellow">Total number of hepatitis C patients detected for Primary hepatocellular cancer (HCC)</th>
+                            
+                            <th class="colspn-12-darkblue">Total no. of HCWs targeted for Immunization</th>
+                            <th class="colspn-12-darkblue">HCWs given 1st Dose</th>
+                            <th class="colspn-12-darkblue">HCWs given 2nd Dose</th>
+                            <th class="colspn-12-darkblue">HCWs given 3rd Dose</th>
+                            
+                            <th class="colspn-12-lightblue">Total no. of HRGs targeted for vaccination</th>
+                            <th class="colspn-12-lightblue">HRGs given 1st Dose</th>
+                            <th class="colspn-12-lightblue">HRGs given 2nd Dose</th>
+                            <th class="colspn-12-lightblue">HRGs given 3rd Dose</th>
+                            
+                            <th class="colspn-12-green">Female Sex Workers (FSW)</th>
+                            <th class="colspn-12-green">Men having sex with men (MSM)</th>
+                            <th class="colspn-12-green">Injected Drug Users (IDUs)</th>
+                            <th class="colspn-12-green">Transgender People (TGs)</th>
+                            <th class="colspn-12-green">Total HRGs</th>
+                            <th class="colspn-12-green">Single Male Migrants (SMM)</th>
+                            <th class="colspn-12-green">Long distance Truckers</th>
+                            <th class="colspn-12-green">ICTC clients</th>
+                            <th class="colspn-12-green">Prisoners</th>
+                            <th class="colspn-12-green">Other Closed settings</th>
+                            
+                            <th class="colspn-12-green">Female Sex Workers (FSW)</th>
+                            <th class="colspn-12-green">Men having sex with men (MSM)</th>
+                            <th class="colspn-12-green">Injected Drug Users (IDUs)</th>
+                            <th class="colspn-12-green">Transgender People (TGs)</th>
+                            <th class="colspn-12-green">Total HRGs</th>
+                            <th class="colspn-12-green">Single Male Migrants (SMM)</th>
+                            <th class="colspn-12-green">Long distance Truckers</th>
+                            <th class="colspn-12-green">ICTC clients</th>
+                            <th class="colspn-12-green">Prisoners</th>
+                            <th class="colspn-12-green">Other Closed settings</th>
+                            
+                            <th class="colspn-12-green">Female Sex Workers (FSW)</th>
+                            <th class="colspn-12-green">Men having sex with men (MSM)</th>
+                            <th class="colspn-12-green">Injected Drug Users (IDUs)</th>
+                            <th class="colspn-12-green">Transgender People (TGs)</th>
+                            <th class="colspn-12-green">Total HRGs</th>
+                            <th class="colspn-12-green">Single Male Migrants (SMM)</th>
+                            <th class="colspn-12-green">Long distance Truckers</th>
+                            <th class="colspn-12-green">ICTC clients</th>
+                            <th class="colspn-12-green">Prisoners</th>
+                            <th class="colspn-12-green">Other Closed settings</th>
+                            
+                            <th class="colspn-12-green">Female Sex Workers (FSW)</th>
+                            <th class="colspn-12-green">Men having sex with men (MSM)</th>
+                            <th class="colspn-12-green">Injected Drug Users (IDUs)</th>
+                            <th class="colspn-12-green">Transgender People (TGs)</th>
+                            <th class="colspn-12-green">Total HRGs</th>
+                            <th class="colspn-12-green">Single Male Migrants (SMM)</th>
+                            <th class="colspn-12-green">Long distance Truckers</th>
+                            <th class="colspn-12-green">ICTC clients</th>
+                            <th class="colspn-12-green">Prisoners</th>
+                            <th class="colspn-12-green">Other Closed settings</th>
+
+                            <th class="colspn-12-green">Female Sex Workers (FSW)</th>
+                            <th class="colspn-12-green">Men having sex with men (MSM)</th>
+                            <th class="colspn-12-green">Injected Drug Users (IDUs)</th>
+                            <th class="colspn-12-green">Transgender People (TGs)</th>
+                            <th class="colspn-12-green">Total HRGs</th>
+                            <th class="colspn-12-green">Single Male Migrants (SMM)</th>
+                            <th class="colspn-12-green">Long distance Truckers</th>
+                            <th class="colspn-12-green">ICTC clients</th>
+                            <th class="colspn-12-green">Prisoners</th>
+                            <th class="colspn-12-green">Other Closed settings</th>
+                            
+                            <th class="colspn-12-yellow">Female Sex Workers (FSW)</th>
+                            <th class="colspn-12-yellow">Men having sex with men (MSM)</th>
+                            <th class="colspn-12-yellow">Injected Drug Users (IDUs)</th>
+                            <th class="colspn-12-yellow">Transgender People (TGs)</th>
+                            <th class="colspn-12-yellow">Total HRGs</th>
+                            <th class="colspn-12-yellow">Single Male Migrants (SMM)</th>
+                            <th class="colspn-12-yellow">Long distance Truckers</th>
+                            <th class="colspn-12-yellow">ICTC clients</th>
+                            <th class="colspn-12-yellow">Prisoners</th>
+                            <th class="colspn-12-yellow">Other Closed settings</th>
+
+                            <th class="colspn-12-yellow">Female Sex Workers (FSW)</th>
+                            <th class="colspn-12-yellow">Men having sex with men (MSM)</th>
+                            <th class="colspn-12-yellow">Injected Drug Users (IDUs)</th>
+                            <th class="colspn-12-yellow">Transgender People (TGs)</th>
+                            <th class="colspn-12-yellow">Total HRGs</th>
+                            <th class="colspn-12-yellow">Single Male Migrants (SMM)</th>
+                            <th class="colspn-12-yellow">Long distance Truckers</th>
+                            <th class="colspn-12-yellow">ICTC clients</th>
+                            <th class="colspn-12-yellow">Prisoners</th>
+                            <th class="colspn-12-yellow">Other Closed settings</th>
+
+                            <th class="colspn-12-yellow">Female Sex Workers (FSW)</th>
+                            <th class="colspn-12-yellow">Men having sex with men (MSM)</th>
+                            <th class="colspn-12-yellow">Injected Drug Users (IDUs)</th>
+                            <th class="colspn-12-yellow">Transgender People (TGs)</th>
+                            <th class="colspn-12-yellow">Total HRGs</th>
+                            <th class="colspn-12-yellow">Single Male Migrants (SMM)</th>
+                            <th class="colspn-12-yellow">Long distance Truckers</th>
+                            <th class="colspn-12-yellow">ICTC clients</th>
+                            <th class="colspn-12-yellow">Prisoners</th>
+                            <th class="colspn-12-yellow">Other Closed settings</th>
+
+                            <th class="colspn-12-yellow">Female Sex Workers (FSW)</th>
+                            <th class="colspn-12-yellow">Men having sex with men (MSM)</th>
+                            <th class="colspn-12-yellow">Injected Drug Users (IDUs)</th>
+                            <th class="colspn-12-yellow">Transgender People (TGs)</th>
+                            <th class="colspn-12-yellow">Total HRGs</th>
+                            <th class="colspn-12-yellow">Single Male Migrants (SMM)</th>
+                            <th class="colspn-12-yellow">Long distance Truckers</th>
+                            <th class="colspn-12-yellow">ICTC clients</th>
+                            <th class="colspn-12-yellow">Prisoners</th>
+                            <th class="colspn-12-yellow">Other Closed settings</th>
+
+                            <th class="colspn-12-yellow">Female Sex Workers (FSW)</th>
+                            <th class="colspn-12-yellow">Men having sex with men (MSM)</th>
+                            <th class="colspn-12-yellow">Injected Drug Users (IDUs)</th>
+                            <th class="colspn-12-yellow">Transgender People (TGs)</th>
+                            <th class="colspn-12-yellow">Total HRGs</th>
+                            <th class="colspn-12-yellow">Single Male Migrants (SMM)</th>
+                            <th class="colspn-12-yellow">Long distance Truckers</th>
+                            <th class="colspn-12-yellow">ICTC clients</th>
+                            <th class="colspn-12-yellow">Prisoners</th>
+                            <th class="colspn-12-yellow">Other Closed settings</th>
+
+                            <th class="colspn-12-yellow">Female Sex Workers (FSW)</th>
+                            <th class="colspn-12-yellow">Men having sex with men (MSM)</th>
+                            <th class="colspn-12-yellow">Injected Drug Users (IDUs)</th>
+                            <th class="colspn-12-yellow">Transgender People (TGs)</th>
+                            <th class="colspn-12-yellow">Total HRGs</th>
+                            <th class="colspn-12-yellow">Single Male Migrants (SMM)</th>
+                            <th class="colspn-12-yellow">Long distance Truckers</th>
+                            <th class="colspn-12-yellow">ICTC clients</th>
+                            <th class="colspn-12-yellow">Prisoners</th>
+                            <th class="colspn-12-yellow">Other Closed settings</th>
+
+                            <th class="colspn-12-yellow">Female Sex Workers (FSW)</th>
+                            <th class="colspn-12-yellow">Men having sex with men (MSM)</th>
+                            <th class="colspn-12-yellow">Injected Drug Users (IDUs)</th>
+                            <th class="colspn-12-yellow">Transgender People (TGs)</th>
+                            <th class="colspn-12-yellow">Total HRGs</th>
+                            <th class="colspn-12-yellow">Single Male Migrants (SMM)</th>
+                            <th class="colspn-12-yellow">Long distance Truckers</th>
+                            <th class="colspn-12-yellow">ICTC clients</th>
+                            <th class="colspn-12-yellow">Prisoners</th>
+                            <th class="colspn-12-yellow">Other Closed settings</th>
+
+                            <th class="colspn-12-yellow">Female Sex Workers (FSW)</th>
+                            <th class="colspn-12-yellow">Men having sex with men (MSM)</th>
+                            <th class="colspn-12-yellow">Injected Drug Users (IDUs)</th>
+                            <th class="colspn-12-yellow">Transgender People (TGs)</th>
+                            <th class="colspn-12-yellow">Total HRGs</th>
+                            <th class="colspn-12-yellow">Single Male Migrants (SMM)</th>
+                            <th class="colspn-12-yellow">Long distance Truckers</th>
+                            <th class="colspn-12-yellow">ICTC clients</th>
+                            <th class="colspn-12-yellow">Prisoners</th>
+                            <th class="colspn-12-yellow">Other Closed settings</th>                   
+                        </tr>
+                        <tr>
+                            <th>&nbsp;</th>
+                            <th>&nbsp;</th>
+                            <th>&nbsp;</th>
+                            <th>&nbsp;</th>
+                            <td class="colspn-10-gray">1.1.1</td>
+                            <td class="colspn-10-gray">1.1.2</td>
+                            <td class="colspn-10-gray">1.1.3</td>
+                            <td class="colspn-10-gray">1.1.4</td>
+                            <td class="colspn-10-gray">1.1.5</td>
+                            <td class="colspn-10-gray">1.1.6</td>
+                            <td class="colspn-10-gray">1.2.1</td>
+                            <td class="colspn-10-gray">1.2.2</td>
+                            <td class="colspn-10-gray">1.2.3</td>
+                            <td class="colspn-10-gray">1.2.4</td>
+
+                            <td>2.1.1</td>
+                            <td>2.1.2</td>
+                            <td>2.1.3</td>
+                            <td>2.1.4</td>
+                            <td>2.1.5</td>
+                            <td>2.1.6</td>
+                            <td>2.1.7</td>
+                            <td>2.1.8</td>
+
+                            <td>3.1.1</td>
+                            <td>3.1.2</td>
+                            <td>3.1.3</td>
+                            <td>3.1.4</td>
+                            <td>3.1.5</td>
+                            <td>3.1.6</td>
+                            
+                            <td>4.1.1</td>
+                            <td>4.1.2</td>
+                            <td>4.1.3</td>
+                            <td>4.1.4</td>
+                            <td>4.1.5</td>
+                            <td>4.1.6</td>
+                            <td>4.1.7</td>
+                            <td>4.1.8</td>
+                            <td>4.1.9</td>
+                            <td>4.1.10</td>
+                            
+                            <td>5.1.1</td>
+                            <td>5.1.2</td>
+                            <td>5.1.3</td>
+                            <td>5.1.4</td>
+                            <td>5.2.1</td>
+                            <td>5.2.2</td>
+                            <td>5.2.3</td>
+                            <td>5.2.4</td>
+                            
+                            <td>2.2.1</td>
+                            <td>2.2.2</td>
+                            <td>2.2.3</td>
+                            <td>2.2.4</td>
+                            <td>2.2.5</td>
+                            <td>2.2.6</td>
+                            <td>2.2.7</td>
+                            <td>2.2.8</td>
+                            <td>2.2.9</td>
+                            <td>2.2.10</td>
+                            <td>2.2.11</td>
+                            <td>2.2.12</td>
+
+                            <td>2.2.13</td>
+                            <td>2.2.14</td>
+                            <td>2.2.15</td>
+                            <td>2.2.16</td>
+                            <td>2.2.17</td>
+                            <td>2.2.18</td>
+                            <td>2.2.19</td>
+                            <td>2.2.20</td>
+                            <td>2.2.21</td>
+                            <td>2.2.22</td>
+                            <td>2.2.23</td>
+                            <td>2.2.24</td>
+
+                            <td>2.2.25</td>
+                            <td>2.2.26</td>
+                            <td>2.2.27</td>
+                            <td>2.2.28</td>
+                            <td>2.2.29</td>
+                            <td>2.2.30</td>
+                            <td>2.2.31</td>
+                            <td>2.2.32</td>
+                            <td>2.2.33</td>
+                            <td>2.2.34</td>
+                            <td>2.2.35</td>
+                            <td>2.2.36</td>
+
+                            <td>2.2.37</td>
+                            <td>2.2.38</td>
+                            <td>2.2.39</td>
+                            <td>2.2.40</td>
+                            <td>2.2.41</td>
+                            <td>2.2.42</td>
+                            <td>2.2.43</td>
+                            <td>2.2.44</td>
+                            <td>2.2.45</td>
+                            <td>2.2.46</td>
+                            <td>2.2.47</td>
+                            <td>2.2.48</td>
+
+                            <td>2.2.49</td>
+                            <td>2.2.50</td>
+                            <td>2.2.51</td>
+                            <td>2.2.52</td>
+                            <td>2.2.53</td>
+                            <td>2.2.54</td>
+                            <td>2.2.55</td>
+                            <td>2.2.56</td>
+                            <td>2.2.57</td>
+                            <td>2.2.58</td>
+                            <td>2.2.59</td>
+                            <td>2.2.60</td>
+                            
+                            <td>4.2.1</td>
+                            <td>4.2.2</td>
+                            <td>4.2.3</td>
+                            <td>4.2.4</td>
+                            <td>4.2.5</td>
+                            <td>4.2.6</td>
+                            <td>4.2.7</td>
+                            <td>4.2.8</td>
+                            <td>4.2.9</td>
+                            <td>4.2.10</td>
+                            <td>4.2.11</td>
+                            <td>4.2.12</td>
+                            
+                            <td>4.2.13</td>
+                            <td>4.2.14</td>
+                            <td>4.2.15</td>
+                            <td>4.2.16</td>
+                            <td>4.2.17</td>
+                            <td>4.2.18</td>
+                            <td>4.2.19</td>
+                            <td>4.2.20</td>
+                            <td>4.2.21</td>
+                            <td>4.2.22</td>
+                            <td>4.2.23</td>
+                            <td>4.2.24</td>
+                            
+                            <td>4.2.25</td>
+                            <td>4.2.26</td>
+                            <td>4.2.27</td>
+                            <td>4.2.28</td>
+                            <td>4.2.29</td>
+                            <td>4.2.30</td>
+                            <td>4.2.31</td>
+                            <td>4.2.32</td>
+                            <td>4.2.33</td>
+                            <td>4.2.34</td>
+                            <td>4.2.35</td>
+                            <td>4.2.36</td>
+                            
+                            <td>4.2.37</td>
+                            <td>4.2.38</td>
+                            <td>4.2.39</td>
+                            <td>4.2.40</td>
+                            <td>4.2.41</td>
+                            <td>4.2.42</td>
+                            <td>4.2.43</td>
+                            <td>4.2.44</td>
+                            <td>4.2.45</td>
+                            <td>4.2.46</td>
+                            <td>4.2.47</td>
+                            <td>4.2.48</td>
+                            
+                            <td>4.2.49</td>
+                            <td>4.2.50</td>
+                            <td>4.2.51</td>
+                            <td>4.2.52</td>
+                            <td>4.2.53</td>
+                            <td>4.2.54</td>
+                            <td>4.2.55</td>
+                            <td>4.2.56</td>
+                            <td>4.2.57</td>
+                            <td>4.2.58</td>
+                            <td>4.2.59</td>
+                            <td>4.2.60</td>
+                            
+                            <td>4.2.61</td>
+                            <td>4.2.62</td>
+                            <td>4.2.63</td>
+                            <td>4.2.64</td>
+                            <td>4.2.65</td>
+                            <td>4.2.66</td>
+                            <td>4.2.67</td>
+                            <td>4.2.68</td>
+                            <td>4.2.69</td>
+                            <td>4.2.70</td>
+                            <td>4.2.71</td>
+                            <td>4.2.72</td>
+                            
+                            <td>4.2.73</td>
+                            <td>4.2.74</td>
+                            <td>4.2.75</td>
+                            <td>4.2.76</td>
+                            <td>4.2.77</td>
+                            <td>4.2.78</td>
+                            <td>4.2.79</td>
+                            <td>4.2.80</td>
+                            <td>4.2.81</td>
+                            <td>4.2.82</td>
+                            <td>4.2.83</td>
+                            <td>4.2.84</td>
+                            
+                            <td>4.2.85</td>
+                            <td>4.2.86</td>
+                            <td>4.2.87</td>
+                            <td>4.2.88</td>
+                            <td>4.2.89</td>
+                            <td>4.2.90</td>
+                            <td>4.2.91</td>
+                            <td>4.2.92</td>
+                            <td>4.2.93</td>
+                            <td>4.2.94</td>
+                            <td>4.2.95</td>
+                            <td>4.2.96</td>
+
+                        </tr>
+                    </thead>
+                </table>
+            </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
