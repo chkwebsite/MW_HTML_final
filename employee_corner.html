@@ -731,7 +731,7 @@ img.hover-shadow {
                                         <div class="grid_9">
                                             <div class="grid_9_div">
                                                 <div class="card bg-transparent border-0 text-center mb-2">
-                                                    <a href="avp_pawan_pathak.html" class="stretched-link">
+                                                    <a onclick="openModal();currentSlide(10)" href="#" class="stretched-link">
                                                     <img class="w-100 mb-3 img_style" src="./assets/images/team/50.jpg" alt="">
                                                     <h4>Shyam <br>Bahadur</h4>                                                    
                                                 </a>
@@ -739,7 +739,7 @@ img.hover-shadow {
                                             </div>
                                             <div class="grid_9_div">
                                                 <div class="card bg-transparent border-0 text-center mb-2">
-                                                    <a href="avp_pawan_pathak.html" class="stretched-link">
+                                                    <a onclick="openModal();currentSlide(11)" href="#" class="stretched-link">
                                                     <img class="w-100 mb-3 img_style" src="./assets/images/team/ajay_mishra.jpg" alt="">
                                                     <h4>Ajay <br>Mishra</h4>                                        
                                                 </a>
@@ -860,6 +860,79 @@ img.hover-shadow {
                                             </div>
 
                                         </div>
+
+                                        <div id="myModal_srd" class="modal">
+                                            <span class="close cursor" onclick="closeModal()">&times;</span>
+                                            <div class="modal-content">
+                                          
+                                              <div class="mySlides">
+                                                <div class="numbertext">1 / 4</div>
+                                                <div class="pop_grid_2">
+                                                    <div class="text-center pt-4">
+                                                    <img src="./assets/images/team/50.jpg" alt="">
+                                                    <h3>Shyam Bahadur</h3>
+                                                    <small class="w-100 float-start" style="color: #003C6A;">AVP</small>
+                                                    <small><b>Email: </b> <span style="color: #003C6A;">shyam.bahadur@microwarecorp.com</span></small>
+                                                    </div>
+                                                    <div class="pt-4">
+                                                    <p class="px-4" style="color: #4E4E4E;text-align: justify;"><b>Profile :</b> Coming soon content...
+                                                    </p>
+                                                </div>
+                                                    </div>
+                                              </div>
+                                          
+                                               <div class="mySlides">
+                                                <div class="numbertext">2 / 4</div>
+                                                <div class="pop_grid_2">
+                                                    <div class="text-center pt-4">
+                                                    <img src="./assets/images/team/ajay_mishra.jpg" alt="">
+                                                    <h3>Ajay Mishra</h3>
+                                                    <small class="w-100 float-start" style="color: #003C6A;">AVP</small>
+                                                    <small><b>Email: </b> <span style="color: #003C6A;">ajay.mishra@microwarecorp.com</span></small>
+                                                    </div>
+                                                    <div class="pt-4">
+                                                    <p class="px-4" style="color: #4E4E4E;text-align: justify;"><b>Profile :</b> Coming soon content...
+                                                    </p>
+                                                </div>
+                                                    </div>
+                                              </div>
+                                          
+                                            <!--  <div class="mySlides">
+                                                <div class="numbertext">3 / 4</div>
+                                                <img src="./assets/images/team/2.jpg" style="width:100%">
+                                              </div>
+                                              
+                                              <div class="mySlides">
+                                                <div class="numbertext">4 / 4</div>
+                                                <img src="./assets/images/team/3.jpg" style="width:100%">
+                                              </div> -->
+                                              
+                                              <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                                              <a class="next" onclick="plusSlides(1)">&#10095;</a>
+                                          
+                                              <div class="caption-container">
+                                                <p id="caption"></p>
+                                              </div>
+                                          
+                                          
+                                              <div class="column">
+                                                <img class="demo cursor" src="./assets/images/team/50.jpg" style="width:100%" onclick="currentSlide(10)" alt="Nature and sunrise">
+                                              </div>
+                                               <div class="column">
+                                                <img class="demo cursor" src="./assets/images/team/ajay_mishra.jpg" style="width:100%" onclick="currentSlide(11)" alt="Snow">
+                                              </div>
+                                              <!--<div class="column">
+                                                <img class="demo cursor" src="./assets/images/team/2.jpg" style="width:100%" onclick="currentSlide(3)" alt="Mountains and fjords">
+                                              </div>
+                                              <div class="column">
+                                                <img class="demo cursor" src="./assets/images/team/3.jpg" style="width:100%" onclick="currentSlide(4)" alt="Northern Lights">
+                                              </div> -->
+                                            </div>
+                                          </div>
+
+
+
+
                                     </div>
                                   </div>
                                 </div>
@@ -1715,6 +1788,16 @@ img.hover-shadow {
     function closeModal() {
       document.getElementById("myModal_light_team").style.display = "none";
     }
+
+    function openModal() {
+      document.getElementById("myModal_srd").style.display = "block";
+    }
+    
+    function closeModal() {
+      document.getElementById("myModal_srd").style.display = "none";
+    }
+
+
     
     var slideIndex = 1;
     showSlides(slideIndex);
