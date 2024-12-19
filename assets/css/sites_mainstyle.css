@@ -593,7 +593,16 @@ a#scroll {
     z-index: 0;
     left: -25px;
 }
+.modal_content_grid_2 {
+  display: grid;
+  grid-template-columns: 220px auto;
+  gap: 15px;
+  height: 100%;
+}
 @media(max-width:575px){
+  .modal_content_grid_2 {
+    grid-template-columns:auto;
+  }
   .grid_5 {
     grid-template-columns: auto auto ;
     gap: 15px 30px;
@@ -742,6 +751,7 @@ small{
   font-weight: bold;
 }
 @media(max-width:767px){
+
   .grid_5 {
     grid-template-columns: auto auto auto;
     gap: 15px 35px;
