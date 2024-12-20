@@ -711,11 +711,19 @@ ul.emp_list li a:hover{
     font-weight:500;
     box-shadow: 4px 0px 0px #808080;
 }
-.disp_flx {
+.disp_flx, .disp_flx_sb_card {
   display: flex;
   justify-content: space-between;
   align-items: center;
   gap: 15px;
+}
+.disp_flx_colm{
+    display: flex;
+    justify-content: start;
+    flex-direction: column;
+}
+.disp_flx_colm small{
+  font-size:12px
 }
 .upper_layerinn {
   position: absolute;
@@ -749,6 +757,16 @@ small{
   font-size: 22px;
   color: #1d6e9e;
   font-weight: bold;
+}
+.carr_team_icon{
+    float: left;
+    width: 50px;
+    height: 50px;
+    background-color: #E7F2FF;
+    border-radius: 4px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 @media(max-width:767px){
 

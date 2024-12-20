@@ -10,18 +10,753 @@
     <link rel="stylesheet" type="text/css" href="assets/css/all.min.css">
     <link rel="stylesheet" type="text/css" href="assets/css/aos/aos.css">
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css">
-</head>
+    <style>
+      .img_style{
+  height: 220px;
+  object-fit: cover;
+  object-position: top;
+  border-radius: 6px 6px 0px 0px;
+  box-shadow: 0px 0px 6px #ccc;
+}
+.disp_flx {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 15px;
+}
+/* .nav .nav-item.slick-active {
+background-color: transparent;
+  border-radius: 12px 12px 12px 12px;
+  text-align: left;
+  border: 1px solid red !important;
+} */
+.nav .nav-item button {
+  background-color: transparent;
+  color: #000000 !important;
+  border-radius: 12px 12px 12px 12px;
+  text-align: left;
+  width: 100%;
+  margin-bottom: 3px;
+  border: 1px solid #ddd;
+}
+/* button .icon_deact{
+  display: block;
+}
+button .icon_act{
+  display: none;
+}
+button.active .icon_act{
+  display: block;
+}
+button.active .icon_deact{
+  display: none;
+} */
+/* button.active span{
+  color: #ffffff;
+}
+button span{
+  color: #508dc4;
+} */
+button.slick-prev {
+  position: absolute;
+  top: 0px;
+  left: calc(50% - 30px);
+  transform: translate(0, -50%);
+  z-index: 100;
+  border-radius: 50%;
+  border: 1px solid #ddd;
+  background-color: #fff;
+  box-shadow: none;
+  width: 35px;
+  height: 35px;
+}
+button.slick-next {
+  position: absolute;
+  top: 0px;
+  left: calc(50% + 30px);
+  transform: translate(0, -50%);
+  z-index: 100;
+  border-radius: 50%;
+  border: 1px solid #ddd;
+  background-color: #fff;
+  box-shadow: none;
+  width: 35px;
+  height: 35px;
+}
+.slick-prev:before {
+  content: "\f078";
+  font-family: 'fontawesome';
+}
+.slick-next:before, [dir=rtl] .slick-prev:before {
+  content: "\f077";
+  font-family: 'fontawesome';
+}
+.our_service_slick-slider button.nav-link {
+  color: #000000 !important;
+  border: 1px solid #dddddd;
+  margin-bottom: 10px; 
+  border-radius: 12px; 
+  padding: 5px 15px;  
+  background-color: white;
+  min-height: 57px;
+  text-align: left;
+}
+.our_service_slick-slider button.nav-link:hover {
+  color: #000000 !important;
+  border: 1px solid #dd2121 !important;
+}
+button.active {
+  color: #000000 !important;
+  border: 1px solid #e5243c !important;
+}
+.tab-pane{
+border-radius: 12px;
+padding: 30px;
+}
+/* #pills-Agriculture {    
+background-color: #e5243c;
+color: #fff;    
+} */
+.zh.active.show {
+  color: #000000 !important;
+  border: 1px solid #dda83c !important;
+}
+/* #pills-ChildProtection {    
+background-color: #dda83c;
+color: #fff;    
+} */
+.ghwb.active.show {
+  color: #000000 !important;
+  border: 1px solid #4e9e3a !important;
+}
+/* #pills-Education {    
+background-color: #4e9e3a;
+color: #fff;    
+} */
+.qe.active.show {
+  color: #000000 !important;
+  border: 1px solid #c5192f !important;
+}
+/* #pills-Livelihood {    
+background-color: #c5192f;
+color: #fff;    
+} */
+.ge.active.show {
+  color: #000000 !important;
+  border: 1px solid #ff3922 !important;
+}
+/* #pills-Health {    
+background-color: #ff3922;
+color: #fff;    
+} */
+.cws.active.show {
+  color: #000000 !important;
+  border: 1px solid #27bbe5 !important;
+}
+#pills-Watersanitation {    
+background-color: #27bbe5;
+color: #fff;    
+}
+.ace.active.show {
+  color: #000000 !important;
+  border: 1px solid #fcc30d !important;
+}
+#pills-Nutrition {    
+background-color: #fcc30d;
+color: #fff;    
+}
+.dweg.active.show {
+  color: #000000 !important;
+  border: 1px solid #a21945 !important;
+}
+#pills-SkillingMicroenterprise {    
+background-color: #a21945;
+color: #fff;    
+}
+.iiii.active.show {
+  color: #000000 !important;
+  border: 1px solid #fe6927 !important;
+}
+#pills-MicrofinanceArtculture {    
+background-color: #fe6927;
+color: #fff;    
+}
+.ri.active.show {
+  color: #000000 !important;
+  border: 1px solid #df1268 !important;
+}
+#pills-childnutrition {    
+background-color: #df1268;
+color: #fff;    
+}
+.scc.active.show {
+  color: #000000 !important;
+  border: 1px solid #ffaf2d !important;
+}
+#pills-waterresources {    
+background-color: #ffaf2d;
+color: #fff;    
+}
+/* .np.active.show {
+  color: #000000 !important;
+  border: 1px solid #dd2121 !important;
+} */
+.rcp.active.show {
+  color: #000000 !important;
+  border: 1px solid #cea457 !important;
+}
+#pills-womenempowerment {    
+background-color: #cea457;
+color: #fff;    
+}
+.ca.active.show {
+  color: #000000 !important;
+  border: 1px solid #699c6d !important;
+}
+#pills-communityempowerment {    
+background-color: #699c6d;
+color: #fff;    
+}
+.lbw.active.show {
+  color: #000000 !important;
+  border: 1px solid #0b97d9 !important;
+}
+#pills-projectmanagement {    
+background-color: #0b97d9;
+color: #fff;    
+}
+.ll.active.show {
+  color: #000000 !important;
+  border: 1px solid #56c02a !important;
+}
+#pills-ll {    
+background-color: #56c02a;
+color: #fff;    
+}
+.pjsi.active.show {
+  color: #000000 !important;
+  border: 1px solid #00699e !important;
+}
+#pills-pjsi {    
+background-color: #00699e;
+color: #fff;    
+}
+.pg.active.show {
+  color: #000000 !important;
+  border: 1px solid #3b6283 !important;
+}
+#pills-pg {    
+background-color: #3b6283;
+color: #fff;    
+}
+.disp_center{
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  height: 100%;
+}
+/* .slick-list{
+height: 460px !important;
+} */
+  </style>
+  </head>
 <body>
+  <section class="header_section">
     <div class="container-fluid">
-        <div class="row">
-            <div class="col-sm-12 p-0">
-                <div>
-                    <img src="./assets/images/wrbpage-und-const.png" class="w-100" style="
-                    object-fit: fill;height: 100vh;">
-                </div>
+        <div class="row hide-575" style="border-bottom: 1px solid #ddd;">
+            <div class="col-xl-11 col-lg-11 col-md-11 col-sm-12 m-auto p-0">
+                <nav class="navbar navbar-expand-sm py-0">
+
+                    <div class="container-fluid">
+                      <!-- Links -->
+                      <ul class="navbar-nav ms-auto">
+                        <li class="nav-item">
+                          <a class="nav-link" href="#">
+                            <i class="bi bi-volume-up-fill"></i>
+                          </a>
+                        </li>
+                        <li class="nav-item" style="margin-right: 6px;">
+                            <button type="button" class="btn btn-light border btn-sm rounded-0 mt-1">A-</button>
+                            <button type="button" class="btn btn-light border btn-sm rounded-0 mt-1">A</button>
+                            <button type="button" class="btn btn-light border btn-sm rounded-0 mt-1">A+</button>
+                        </li>
+                        <li class="nav-item">
+                          <a class="nav-link p-1" href="#">
+                            <img src="./assets/images/facebook-icon.png" alt="" style="height: 30px;">
+                          </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link p-1" href="#">
+                              <img src="./assets/images/insta-icon.png" alt="" style="height: 30px;">
+                            </a>
+                          </li>
+                          <li class="nav-item">
+                            <a class="nav-link p-1" href="#">
+                              <img src="./assets/images/twitter-icon.png" alt="" style="height: 30px;">
+                            </a>
+                          </li>
+                          <li class="nav-item">
+                            <a class="nav-link p-1" href="#">
+                              <img src="./assets/images/youtube-icon.png" alt="" style="height: 30px;">
+                            </a>
+                          </li>
+                      </ul>
+                    </div>
+                  
+                  </nav>
+            </div>
+        </div>
+        <div class="row" style="border-bottom: 1px solid #ddd;">
+            <div class="col-xl-11 col-lg-11 col-md-11 col-sm-12 m-auto p-0">
+                <nav class="navbar navbar-expand-md mw-home">
+                    <div class="container-fluid">
+                      <a class="navbar-brand" href="index.html">
+                        <img src="./assets/images/mw-logo.png" alt="">
+                      </a>
+                      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
+                        <span class="navbar-toggler-icon"></span>
+                      </button>
+                      <div class="collapse navbar-collapse" id="collapsibleNavbar">
+                        <ul class="navbar-nav ms-auto">
+                          <li class="nav-item">
+                            <a class="nav-link" href="about.html">About us</a>
+                          </li>
+                          <li class="nav-item">
+                            <a class="nav-link" href="our_services.html">Our Services</a>
+                          </li>
+                          <li class="nav-item">
+                            <a class="nav-link" href="client_speak.html">Client Speak</a>
+                          </li> 
+                          <li class="nav-item">
+                            <a class="nav-link" href="employee_corner.html">Employee Corner</a>
+                          </li>  
+                          <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Policies</a>
+                            <ul class="dropdown-menu">
+                              <li><a class="dropdown-item" target="_blank" href="./assets/files/Prevention of Sexual Harassment Policy_Final.pdf">Posh policy</a></li>
+                              <li><a class="dropdown-item" target="_blank" href="./assets/files/MW_HRManual.pdf">HR manual</a></li>
+                            </ul>
+                          </li>  
+                          <li class="nav-item">
+                            <a class="nav-link" href="contact.html">Contact Us</a>
+                          </li>  
+                          <!-- <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Dropdown</a>
+                            <ul class="dropdown-menu">
+                              <li><a class="dropdown-item" href="#">Link</a></li>
+                              <li><a class="dropdown-item" href="#">Another link</a></li>
+                              <li><a class="dropdown-item" href="#">A third link</a></li>
+                            </ul>
+                          </li> -->
+                        </ul>
+                      </div>
+                    </div>
+                  </nav>
             </div>
         </div>
     </div>
+</section>
+    <div class="container-fluid">
+        <div class="row">
+          <div class="col-sm-12 p-0">
+            <div class="position-relative">
+                <img src="./assets/images/carr.png" width="100%" alt="">
+                <div class="upper_layerinn text-white">
+                  <div>
+                    <h1 class="text-center">
+                       Join us
+                    </h1>
+                    <p class="text-center">Discover a community where your talents thrive and your ideas matter. <br>
+                      At Microware Computing Consulting Pvt Ltd, we create opportunities to grow, connect, <br>
+                      and succeed together. Be part of something meaningful, collaborate with passionate individuals, <br>
+                      and achieve great things. Don’t wait—join us today and make a difference!</p>
+                  </div>
+            </div>
+            <div>            
+        </div>
+          </div>
+          </div>
+            <div class="col-xl-11 col-lg-11 col-md-11 col-sm-12 m-auto">
+                <div class="row mt-5 mb-4">
+                    <div class="col-xl-5 col-lg-5 col-md-5 col-sm-12">
+                      <p class="text-uppercase mb-2" style="color: #001833;">Benefits</p>
+                      <h4>Why you Should Join <br>
+                        Our Awesome Team</h4>
+                        <small class="">
+                          Are you ready to make an impact? Join our team and work alongside passionate, innovative 
+                          individuals committed to excellence. We value creativity, collaboration, and growth, offering 
+                          opportunities to advance your career while making a difference. Be part of something 
+                          bigger—<b class="text-primary">join us and shape the future today!</b>
+                        </small>
+                    </div>
+                    <div class="col-xl-7 col-lg-7 col-md-7 col-sm-12">
+                      <div class="row">
+                        <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 mb-5">
+                          <div class="carr_team_icon">
+                            <img style="height:25px" src="./assets/images/team_icon.png" alt="">
+                          </div>
+                          <h5 class="float-start w-100 mt-3">Team work</h5>
+                          <small class="float-start w-100">Teamwork combines strengths, fosters 
+                            collaboration, and drives success,<br> enabling us to achieve more together.</small>
+                        </div>
+                        <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 mb-5">
+                          <div class="carr_team_icon" style="background-color: #F1F7E8;">
+                            <img style="height:25px" src="./assets/images/secured_icon.png" alt="">
+                          </div>
+                          <h5 class="float-start w-100 mt-3">Secured Future</h5>
+                          <small class="float-start w-100">
+                            A secured future offers stability, opportunities, <br>and peace of mind, empowering 
+                            individuals to <br>thrive and achieve dreams.
+                          </small>
+                        </div>
+                        <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 mb-5">
+                          <div class="carr_team_icon" style="background-color: #EFF2F5;">
+                            <img style="height:25px" src="./assets/images/learning_icon.png" alt="">
+                          </div>
+                          <h5 class="float-start w-100 mt-3">Learning Opportunity</h5>
+                          <small class="float-start w-100">T
+                            Learning opportunities empower growth, <br>ignite curiosity, 
+                            and build skills, enabling <br>individuals to adapt, innovate, 
+                            and achieve their fullest potential.
+                          </small>
+                        </div>
+                        <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 mb-5">
+                          <div class="carr_team_icon" style="background-color: #FFEEED;">
+                            <img style="height:25px" src="./assets/images/upgrade_icon.png" alt="">
+                          </div>
+                          <h5 class="float-start w-100 mt-3">Upgrade Skills</h5>
+                          <small class="float-start w-100">
+                            Upgrade your skills to stay competitive, <br>embrace innovation, 
+                            and unlock new <br>opportunities for personal and professional growth.
+                          </small>
+                        </div>
+                      </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row py-5" style="background-color: #F9F9F9;">
+          <div class="col-xl-11 col-lg-11 col-md-11 col-sm-12 m-auto">
+            <div class="row">
+              <div class="col-sm-12 text-center">
+                <p>Come join us</p>
+                <h4>Career Openings</h4>
+                <small>
+                  We’re always looking for creative, talented self-starters to join the JMC<br>
+                  family. Check out our open roles below and fill out an application.
+                </small>
+              </div>
+              <div class="row mt-5">
+
+                <div class="col-xl-3 col-lg-3 col-md-4 col-sm-12">
+                  <div class="our_service_slick-slider " id="pills-tab" role="tablist" style="border: 0px solid #a6aac1;">
+                    
+                        <button class="w-100 nav-link np active show fw-semibold position-relative active" id="pills-Agriculture-tab" 
+                        data-bs-toggle="pill" data-bs-target="#pills-Agriculture" type="button" role="tab" aria-controls="pills-Agriculture" 
+                        aria-selected="true">
+                        <div class="disp_flx">
+                          <!-- <img class="icon_deact" src="assets/images/CoreProficiencies.png" style="height:40px"> -->
+                            <span>HR & Admin</span>  
+                        </div>
+                        </button>
+                      
+                        <button class="w-100 nav-link zh fw-semibold position-relative" id="pills-ChildProtection-tab" 
+                        data-bs-toggle="pill" data-bs-target="#pills-ChildProtection" type="button" role="tab" 
+                        aria-controls="pills-ChildProtection" aria-selected="false">
+                        <div class="disp_flx">
+                          <!-- <img class="icon_deact" src="assets/images/ContactCenterApplicationpackages.png" style="height:40px"> -->
+                            <span>Engineering (20)</span>  
+                        </div>                                        
+                        </button>
+                     
+                        <button class="w-100 nav-link ghwb fw-semibold position-relative" id="pills-Education-tab" 
+                        data-bs-toggle="pill" data-bs-target="#pills-Education" type="button" role="tab" 
+                        aria-controls="pills-Education" aria-selected="false">
+                        <div class="disp_flx">
+                          <!-- <img class="icon_deact" src="assets/images/micro_cvt.png" style="height:40px"> -->
+                            <span>Support</span>  
+                        </div>   
+                        </button>
+                      
+                        <button class="w-100 nav-link qe fw-semibold position-relative" id="pills-Livelihood-tab" 
+                        data-bs-toggle="pill" data-bs-target="#pills-Livelihood" type="button" role="tab" 
+                        aria-controls="pills-Livelihood" aria-selected="false">
+                        <div class="disp_flx">
+                          <!-- <img class="icon_deact" src="assets/images/FeedbackAnalysis.png" style="height:40px"> -->
+                            <span>Design</span>  
+                        </div>   
+                        </button>
+                      
+                        <button class="w-100 nav-link ge fw-semibold position-relative" id="pills-Health-tab" 
+                        data-bs-toggle="pill" data-bs-target="#pills-Health" type="button" role="tab" 
+                        aria-controls="pills-Health" aria-selected="false">
+                        <div class="disp_flx">
+                          <!-- <img class="icon_deact" src="assets/images/echi.png" style="height:40px"> -->
+                            <span>Digital Marketing</span>  
+                        </div>   
+                        </button>
+                      
+                  </div>
+                    
+                    </div>
+                    <div class="col-xl-9 col-lg-9 col-md-8 col-sm-12">
+                    <div class="tab-content border rounded-3 border-secendry w-100" id="pills-tabContent">
+                      <div class="tab-pane fade show active py-0" id="pills-Agriculture" role="tabpanel" aria-labelledby="pills-Agriculture-tab">
+                        <!-- <h2 class="mt-3">HR & Admin</h2> -->
+                        <div class="row pt-3">
+                            <div class="col-am-12">
+                                <div class="card border-0 rounded-0 mb-3 shadow-sm">
+                                  <div class="card-body">
+                                    <div class="disp_flx_sb_card">
+                                      <div class="">
+                                        <span><b>Wordpress Developer</b></span>
+                                      </div>
+                                      <div class="disp_flx_colm">
+                                        <small style="color: #D4D4D4;">Experience</small>
+                                        <span><b>2 Year</b></span>
+                                      </div>
+                                      <div class="disp_flx_colm">
+                                        <small style="color: #D4D4D4;">Deadline</small>
+                                        <span><b>2021-05-08</b></span>
+                                      </div>
+                                      <div class="disp_flx_colm">
+                                        <i class="fa-solid fa-arrow-right-long text-secondary"></i>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                                <div class="card border-0 rounded-0 mb-3 shadow-sm">
+                                  <div class="card-body">
+                                    <div class="disp_flx_sb_card">
+                                      <div class="">
+                                        <span><b>Javascript</b></span>
+                                      </div>
+                                      <div class="disp_flx_colm">
+                                        <small style="color: #D4D4D4;">Experience</small>
+                                        <span><b>1 Year</b></span>
+                                      </div>
+                                      <div class="disp_flx_colm">
+                                        <small style="color: #D4D4D4;">Deadline</small>
+                                        <span><b>2021-05-08</b></span>
+                                      </div>
+                                      <div class="disp_flx_colm">
+                                        <i class="fa-solid fa-arrow-right-long text-secondary"></i>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                                <div class="card border-0 rounded-0 mb-3 shadow-sm">
+                                  <div class="card-body">
+                                    <div class="disp_flx_sb_card">
+                                      <div class="">
+                                        <span><b>Apps Developer</b></span>
+                                      </div>
+                                      <div class="disp_flx_colm">
+                                        <small style="color: #D4D4D4;">Experience</small>
+                                        <span><b>3 Year</b></span>
+                                      </div>
+                                      <div class="disp_flx_colm">
+                                        <small style="color: #D4D4D4;">Deadline</small>
+                                        <span><b>2021-05-08</b></span>
+                                      </div>
+                                      <div class="disp_flx_colm">
+                                        <i class="fa-solid fa-arrow-right-long text-secondary"></i>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                                <div class="card border-0 rounded-0 mb-3 shadow-sm">
+                                  <div class="card-body">
+                                    <div class="disp_flx_sb_card">
+                                      <div class="">
+                                        <span><b>IOS Developer</b></span>
+                                      </div>
+                                      <div class="disp_flx_colm">
+                                        <small style="color: #D4D4D4;">Experience</small>
+                                        <span><b>2 Year</b></span>
+                                      </div>
+                                      <div class="disp_flx_colm">
+                                        <small style="color: #D4D4D4;">Deadline</small>
+                                        <span><b>2021-05-08</b></span>
+                                      </div>
+                                      <div class="disp_flx_colm">
+                                        <i class="fa-solid fa-arrow-right-long text-secondary"></i>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                                <div class="card border-0 rounded-0 mb-3 shadow-sm">
+                                  <div class="card-body">
+                                    <div class="disp_flx_sb_card">
+                                      <div class="">
+                                        <span><b>Node JS Developer</b></span>
+                                      </div>
+                                      <div class="disp_flx_colm">
+                                        <small style="color: #D4D4D4;">Experience</small>
+                                        <span><b>3 Year</b></span>
+                                      </div>
+                                      <div class="disp_flx_colm">
+                                        <small style="color: #D4D4D4;">Deadline</small>
+                                        <span><b>2021-05-08</b></span>
+                                      </div>
+                                      <div class="disp_flx_colm">
+                                        <i class="fa-solid fa-arrow-right-long text-secondary"></i>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        
+                        
+                        
+                      </div>
+                      <div class="tab-pane fade" id="pills-ChildProtection" role="tabpanel" aria-labelledby="pills-ChildProtection-tab">
+                        <img src="./assets/images/ContactCenterApplicationpackages.png" alt="">
+                        <h2>Contact Center Application packages</h2>
+                        <p>Enterprise Call Detail Record Solution</p>
+                        <ul>
+                          <li>Multi-Switch</li>
+                          <li>Multi Dialer</li>
+                          <li>Multi-IP System</li>
+                          <li>Fuzzy Logic For Call Matching</li>
+                          <li>Multi-Currency Reporting</li>
+                          <li>Trunk Loading Analysis</li>
+                          <li>HR Integration</li>
+                          <li>Switch Integration</li>
+                          <li>SNWP Integration</li>
+                        </ul>
+                        <p><i>Above mentioned are Implemented At Multiple Clients/Contact Centers.</i></p>
+                      </div>
+                      <div class="tab-pane fade" id="pills-Education" role="tabpanel" aria-labelledby="pills-Education-tab">
+                        <img src="./assets/images/micro_cvt.png" alt="" style="height: 50px;">
+                        <h2>MicroCVT / MicroAVS</h2>
+                        <ul>
+                          <li>A CTI control providing desktop and server interface functionality provides developers with a substantially faster and more stable development facility</li>
+                          <li>The control helps service a large number of application requirements</li>
+                          <li>Microware has built over 10 different kinds of solutions using this control</li>
+                          <li>Partners have developed additional solutions around this system</li>
+                        </ul>
+                      </div>
+
+                      <div class="tab-pane fade" id="pills-Livelihood" role="tabpanel" aria-labelledby="pills-Livelihood-tab">
+                        <img src="./assets/images/FeedbackAnalysis.png" alt="" style="height: 50px;">
+                        <h2>Feedback Analysis</h2>
+                        <ul>
+                          <li>Capture IVR / switch based feedback from clients / prospects on various questions</li>
+                          <li>Feedback analysis for training needs assessment, as well as compliance</li>
+                        </ul>
+                      </div>
+
+                      <div class="tab-pane fade" id="pills-Health" role="tabpanel" aria-labelledby="pills-Health-tab">
+                        <img src="./assets/images/echi.png" alt="" style="height: 50px;">
+                        <h2>ECHI Loader</h2>
+                        <p>The Extended Call History Interface of Avaya data convertor is licensed by Microware to various agencies for advanced reporting enablement.</p>
+                      </div>
+
+                      <div class="tab-pane fade" id="pills-Watersanitation" role="tabpanel" aria-labelledby="pills-Watersanitation-tab">
+                        <img src="./assets/images/CMS-Multi-timezonereporting.png" alt="" style="height: 50px;">
+                        <h2>CMS - Multi-time zone reporting</h2>
+                        <p>
+                          Microware Multi-timezone product resides in parallel with Avaya CMS, or interfaces with ECHI.
+Provides a portal interface through which users can draw reports in different time zones based on the same base data.
+Various other parameters can be measured, including Service Levels across different intervals and time zones.
+AES integration provides additional reporting & analysis.
+                        </p>
+                      </div>
+                      
+                    </div>
+                  </div>
+            </div>
+            </div>
+          </div>
+        </div>
+    </div>
+
+
+    <section class="footer_n bg-f">
+      <div class="container-fluid">
+    <div class="row">
+      <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 m-auto">
+        <div class="row">
+          <div class="col-xl-4 col-lg-4 col-md-4 col-sm-6 p-0">
+            <!-- <div class="m-logo-sty">
+              <img src="./assets/images/mw-logo.png" alt="" style="height: 59px;">
+            </div> -->
+            <div class="disp_flex-footer py-5 m-logo-padd text-white" style="gap: 10px;">
+              <h5 class="mb-0" style="font-size: 15px;">Microware Computing & Consulting pvt. Ltd.</h5>
+              <p>Spaze I -Tech Park, 1151, Tower B2,<br> Sohna - Gurgaon Rd, Sector 49,<br> Gurugram, Haryana 122018</p>
+              <div class="disp_flex-inn">
+                <img src="./assets/images/mail-icon.png" alt="" style="height: 55px;">
+                email <br>mail@microwarecorp.com
+              </div>
+              <div class="disp_flex-inn">
+                <img src="./assets/images/phone-icon.png" alt="" style="height: 55px;">
+                Social Contact: &nbsp; +91-8800559279 <br>
+                Service: &nbsp; +91 0124-4039300 <br>
+                Admin: &nbsp; +91 9810064657 <br>
+              </div>
+            </div>
+          </div>
+          <div class="col-xl-4 col-lg-4 col-md-4 col-sm-6 p-0">
+            <!-- <div class="m-logo-sty">
+              <h3 class="mb-0" style="padding: 13px 0px;">Pages</h3>
+            </div> -->
+            <div class="disp_flex-footer py-5 m-logo-padd text-white">
+              <ul class="footer_ul">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="offerings.html">Offerings</a></li>
+                <li><a href="industries.html">Industries</a></li>
+                <li><a href="about.html">About us</a></li>
+                <li><a href="case-studies.html">Case studies</a></li>
+                <li><a href="carriers.html">Carriers</a></li>
+                <li><a href="contact.html">Contact us</a></li>
+                <li><a href="quote.html">Quote</a></li>
+              </ul>
+             
+            </div>
+          </div>
+          <div class="col-xl-4 col-lg-4 col-md-4 col-sm-6 p-0">
+            <!-- <div class="m-logo-sty">
+              <h3 class="mb-0" style="padding: 13px 0px;">Get in Touch</h3>
+            </div> -->
+            <div class="py-5 m-logo-padd text-white">
+              <div class="footer-social mb-3">
+              <a href="#">
+                <i class="bi bi-facebook"></i>
+              </a>
+              <a href="#">
+                <i class="bi bi-twitter"></i>
+              </a>
+              <a href="#">
+                <i class="bi bi-instagram"></i>
+              </a>
+              <a href="#">
+                <i class="bi bi-linkedin"></i>
+              </a>
+            </div>
+            <a href="request-demo.html" class="btn btn-outline-primary rounded-0 mx-2 text-white">Get a demo</a>
+            <a href="contact.html" class="btn btn-primary rounded-0"><i class="bi bi-telephone-fill"></i> Contact us</a>
+            </div>
+          </div>
+          <div class="col-sm-12 p-0" style="border-top: 1px solid #205176;">
+            <div class="m-logo-sty py-3" style="background-color: #003b68;">
+              <div class="copyright-flex">
+                <small style="color:#ffffff">Copyright © Microware computing & consulting pvt ltd. All rights reserved</small>
+                <ul class="copy-footer">
+                  <li><a href="cookies.html">Cookies</a></li>
+                  <li><a href="legal.html">Legal</a></li>
+                  <li><a href="privacy.html">Privacy</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    </div>
+    </section>
     <a href="#" id="scroll"><span></span></a>
     
     <script type="text/javascript" src="assets/js/jquery.min.js"></script>
